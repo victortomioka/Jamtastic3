@@ -22,16 +22,21 @@ public class Gun : MonoBehaviour
 			StartCoroutine("ShootCoroutine");
 	}
 
-	private IEnumerator ShootCoroutine()
+	protected IEnumerator ShootCoroutine()
 	{
 		waitFireRate = true;
 
-		GameObject bullet = Instantiate(bulletPrefab, shotOrigin.position, Quaternion.identity);
-		bullet.GetComponent<Projectile>().movement.direction = transform.forward;
-		bullet.SetActive(true);
+        SpawnBullet();
 
 		yield return new WaitForSeconds(fireRate);
 
 		waitFireRate = false;
 	}
+
+    protected void SpawnBullet()
+    {
+        GameObject bullet = Instantiate(bulletPrefab, shotOrigin.position, Quaternion.identity);
+        bullet.GetComponent<Projectile>().movement.direction = transform.forward;
+        bullet.SetActive(true);
+    }
 }

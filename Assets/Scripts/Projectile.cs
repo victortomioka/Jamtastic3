@@ -5,6 +5,8 @@ using UnityEngine;
 [RequireComponent(typeof(StraightMovement))]
 public class Projectile : MonoBehaviour 
 {
+	public float damage;
+
 	public StraightMovement movement;
 
 	private Collider coll;
@@ -18,6 +20,12 @@ public class Projectile : MonoBehaviour
 	{
 		if(!coll.enabled)
 			return;
+
+		IDamageable damageable = other.GetComponent<IDamageable>();
+
+		if(damageable != null)
+			damageable.TakeHit(damage);
+
 
 		Destroy(this.gameObject);
 	}
