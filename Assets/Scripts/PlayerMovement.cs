@@ -13,13 +13,10 @@ public class PlayerMovement : MonoBehaviour
 		rb = GetComponent<Rigidbody>();	
 	}
 
-	void FixedUpdate() 
+	public void Move(float h, float v)
 	{
-		float axisHorizontal = Input.GetAxis("Horizontal");
-		float axisVertical = Input.GetAxis("Vertical");
-
-		Vector3 movement = new Vector3(axisHorizontal, 0, axisVertical) * speed * Time.deltaTime;
-		Vector3 position = rb.position + movement;
-		rb.MovePosition(position);
-	}	
+		Vector3 movement = new Vector3(h, 0, v);
+		movement =  movement.normalized * speed * Time.deltaTime;
+		rb.MovePosition(rb.position + movement);
+	}
 }
