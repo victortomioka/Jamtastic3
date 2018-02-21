@@ -12,6 +12,6 @@ public class PlayerCharacter : Character
 
 	protected override void Die()
 	{
-		SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        SceneLoader.Restart(false);
 	}
 }
