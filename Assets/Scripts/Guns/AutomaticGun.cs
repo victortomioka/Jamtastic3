@@ -6,6 +6,6 @@ public class AutomaticGun : Gun
 {
     private void Start()
     {
-        InvokeRepeating("SpawnBullet", 0, fireRate);
+        InvokeRepeating("SpawnBullet", 0, m_Weapon.FireRate);
     }
 }
