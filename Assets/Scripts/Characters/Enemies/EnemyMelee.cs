@@ -9,6 +9,7 @@ public class EnemyMelee : EnemyCharacter
     public float followRange;
 
     private bool busy;
+    private bool dead;
     private bool startedFollow;
     private LayerMask playerMask;
 
@@ -43,7 +44,7 @@ public class EnemyMelee : EnemyCharacter
             hits = Physics.OverlapSphere(transform.position, followRange, playerMask);
             if (hits.Length > 0)
             {
-                followTarget.StartFollowing();
+                Follow();
                 startedFollow = true;
             }
         }
@@ -61,19 +62,22 @@ public class EnemyMelee : EnemyCharacter
     {
         anim.SetTrigger("attack");
         busy = true;
-        followTarget.StopFollowing();
+        
+        Stop();
     }
 
     public void AttackEnd()
     {
         busy = false;
-        followTarget.StartFollowing();
+        
+        Follow();
     }
 
     public void TakeHitEnd()
     {
         busy = false;
-        followTarget.StartFollowing();
+        
+        Follow();
     }
 
     public override void TakeHit(float damage)
@@ -82,7 +86,8 @@ public class EnemyMelee : EnemyCharacter
         {
             anim.SetTrigger("getHit");
             busy = true;
-            followTarget.StopFollowing();
+
+            Stop();
         }
         
         base.TakeHit(damage);
@@ -91,12 +96,25 @@ public class EnemyMelee : EnemyCharacter
     protected override void Die()
     {
         anim.SetTrigger("die");
+        dead = true;
 
         coll.enabled = false;
-        followTarget.StopFollowing();
         lookAt.enabled = false;
+
+        Stop();
         
         //base.Die();
+    }
+
+    private void Stop()
+    {
+        followTarget.StopFollowing();
+    }
+
+    private void Follow()
+    {
+        if(!dead)
+            followTarget.StartFollowing();
     }
 
     private void OnTriggerEnter(Collider other) 
