@@ -13,7 +13,6 @@ public class EnemyMelee : EnemyCharacter
     private bool startedFollow;
     private LayerMask playerMask;
 
-
     private Animator anim;
     private Collider coll;
     private FollowTarget followTarget;
