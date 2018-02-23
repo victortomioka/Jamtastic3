@@ -8,23 +8,34 @@ public class EnemyMelee : EnemyCharacter
     public float attackRange;
     public float followRange;
 
+    private bool busy;
     private bool startedFollow;
     private LayerMask playerMask;
 
-    private FollowTarget followTarget;
+
     private Animator anim;
+    private Collider coll;
+    private FollowTarget followTarget;
+    private LookAt lookAt;
+    
 
     protected override void Start()
     {
         base.Start();
 
         playerMask = LayerMask.GetMask("Player");
-        followTarget = GetComponent<FollowTarget>();
+
         anim = GetComponentInChildren<Animator>();
+        coll = GetComponent<Collider>();
+        followTarget = GetComponent<FollowTarget>();
+        lookAt = GetComponent<LookAt>();
     }
 
     private void Update()
     {
+        if(busy)
+            return;
+
         Collider[] hits;
 
         if (!startedFollow)
@@ -33,7 +44,7 @@ public class EnemyMelee : EnemyCharacter
             if (hits.Length > 0)
             {
                 followTarget.StartFollowing();
-                startedFollow = false;
+                startedFollow = true;
             }
         }
 
@@ -43,24 +54,37 @@ public class EnemyMelee : EnemyCharacter
             AttackStart();
         }
 
-        anim.SetBool("walking", followTarget.following);
+        anim.SetBool("walking", followTarget.IsMoving);
     }
 
     public void AttackStart()
     {
         anim.SetTrigger("attack");
+        busy = true;
         followTarget.StopFollowing();
     }
 
     public void AttackEnd()
     {
+        busy = false;
+        followTarget.StartFollowing();
+    }
+
+    public void TakeHitEnd()
+    {
+        busy = false;
         followTarget.StartFollowing();
     }
 
     public override void TakeHit(float damage)
     {
-        anim.SetTrigger("getHit");
-
+        if(!busy)
+        {
+            anim.SetTrigger("getHit");
+            busy = true;
+            followTarget.StopFollowing();
+        }
+        
         base.TakeHit(damage);
     }
 
@@ -68,9 +92,21 @@ public class EnemyMelee : EnemyCharacter
     {
         anim.SetTrigger("die");
 
+        coll.enabled = false;
         followTarget.StopFollowing();
+        lookAt.enabled = false;
         
         //base.Die();
+    }
+
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag("Player"))
+        {
+            IDamageable dmg = other.gameObject.GetComponent<IDamageable>();
+            if(dmg != null)
+                dmg.TakeHit(1);
+        }
     }
 
     private void OnDrawGizmos()

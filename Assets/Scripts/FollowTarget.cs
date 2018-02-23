@@ -8,18 +8,20 @@ public class FollowTarget : MonoBehaviour
 {
     public Transform target;
 
-    [HideInInspector] public bool following;
-
     private NavMeshAgent navAgent;
+
+    public bool IsMoving { get{ return !navAgent.isStopped; } }
 
     private void Start()
     {
         navAgent = GetComponent<NavMeshAgent>();
+
+        StopFollowing();
     }
 
     private void Update()
     {
-        if (!following)
+        if (navAgent.isStopped)
             return;
 
         Vector3 targetPos = target.position;
@@ -35,11 +37,11 @@ public class FollowTarget : MonoBehaviour
 
     public void StartFollowing()
     {
-        following = true;
+        navAgent.isStopped = false;
     }
 
     public void StopFollowing()
     {
-        following = false;
+        navAgent.isStopped = true;
     }
 }

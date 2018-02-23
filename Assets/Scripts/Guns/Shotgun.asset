@@ -19,5 +19,5 @@ MonoBehaviour:
   ShotgunBulletsCount: 5
   ShotgunSpread: 0.2
   name: Shotgun
-  BulletPrefab: {fileID: 1980386461891036, guid: e63c36828b9454c4598119e362b63ba8,
+  BulletPrefab: {fileID: 1980386461891036, guid: 069c6911a27c15640ac1c9284803c724,
     type: 2}
