@@ -8,11 +8,19 @@ public class PlayerController : MonoBehaviour
 	public Gun gun;
     public DashMovement dashMovement;
     
+    public float meleeDamage;
+    public float knockBackForce;
+
+    private bool attacking;    
     private int groundLayer;
+
+    private Animator anim;
 
     private void Start() 
     {
         groundLayer = LayerMask.NameToLayer("Ground");
+
+        anim = GetComponentInChildren<Animator>();
     }
 
     private void Reset() 
@@ -33,12 +41,32 @@ public class PlayerController : MonoBehaviour
 
 	private void Update() 
 	{
-        if (Input.GetMouseButton(0) && IsEnabled(gun))
+        if (Input.GetButtonDown("Shoot") && IsEnabled(gun))
 			gun.Shoot();
 
-        if (Input.GetMouseButtonDown(1) && IsEnabled(dashMovement))
+        if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
             dashMovement.Dash(transform.forward);
+
+        if(Input.GetButtonDown("Melee") && !attacking && !dashMovement.IsDashing)
+            AttackStart();
 	}
+
+    public void AttackStart()
+    {
+        anim.SetTrigger("attack");
+        attacking = true;
+
+        movement.enabled = false;
+        gun.enabled = false;
+    }
+
+    public void AttackEnd()
+    {
+        attacking = false;
+
+        movement.enabled = true;
+        gun.enabled = true;
+    }
 
     private void DashStarted()
     {
@@ -66,4 +94,20 @@ public class PlayerController : MonoBehaviour
             dashMovement.Interrupt();
     }
 
+    private void OnTriggerEnter(Collider other) 
+    {
+        if(other.CompareTag("Enemy"))
+        {
+            EnemyCharacter enemy = other.gameObject.GetComponent<EnemyCharacter>();
+
+            if(enemy != null)
+            {
+                enemy.KnockBack(knockBackForce, -enemy.transform.forward);
+
+                IDamageable dmg = enemy.gameObject.GetComponent<IDamageable>();
+                if(dmg != null)
+                    dmg.TakeHit(meleeDamage);
+            }
+        }
+    }
 }
