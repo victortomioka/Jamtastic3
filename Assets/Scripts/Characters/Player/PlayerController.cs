@@ -41,7 +41,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Update() 
 	{
-        if (Input.GetButtonDown("Shoot") && IsEnabled(gun))
+        if (Input.GetButton("Shoot") && IsEnabled(gun))
 			gun.Shoot();
 
         if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
