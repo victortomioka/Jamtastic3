@@ -34,7 +34,6 @@ public class EnemyRanged : EnemyCharacter
 
     private void Update()
     {
-		Debug.Log(busy);
         if(busy)
             return;
 

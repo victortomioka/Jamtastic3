@@ -7,6 +7,7 @@ public class PlayerController : MonoBehaviour
 	public PlayerMovement movement;
 	public Gun gun;
     public DashMovement dashMovement;
+    public LookAtCursor lookAtCursor;
     
     public float meleeDamage;
     public float knockBackForce;
@@ -28,6 +29,7 @@ public class PlayerController : MonoBehaviour
 		movement = GetComponent<PlayerMovement>();
 		gun = GetComponentInChildren<Gun>();
         dashMovement = GetComponent<DashMovement>();
+        lookAtCursor = GetComponent<LookAtCursor>();
     }
 
 	void FixedUpdate() 
@@ -49,6 +51,14 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Melee") && !attacking && !dashMovement.IsDashing)
             AttackStart();
+
+        if(Input.GetButtonDown("Cancel"))
+		{
+			if(GameManager.IsPaused) 
+				GameManager.Instance.Resume();
+			else
+				GameManager.Instance.Pause();
+		}
 	}
 
     public void AttackStart()
@@ -72,12 +82,20 @@ public class PlayerController : MonoBehaviour
     {
         movement.enabled = false;
         gun.enabled = false;
+        lookAtCursor.enabled = false;
     }
 
     private void DashEnded()
     {
         movement.enabled = true;
         gun.enabled = true;
+        lookAtCursor.enabled = true;
+    }
+
+    public void SetInputEnabled(bool enable)
+    {
+        lookAtCursor.enabled = enable;
+        enabled = enable;
     }
 
 	private bool IsEnabled(MonoBehaviour component)

@@ -14,4 +14,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Testes/Enemies_Melee.unity
     guid: 8a001092cbe23894eb9993f13074bdbd
+  - enabled: 1
+    path: Assets/Scenes/Testes/Pause_Screen.unity
+    guid: 4186c66c9f688a94fa97d7518518f9bb
   m_configObjects: {}

@@ -418,6 +418,7 @@ MonoBehaviour:
   movement: {fileID: 114295741352405238}
   gun: {fileID: 114306342447634756}
   dashMovement: {fileID: 114862039420965094}
+  lookAtCursor: {fileID: 114006459974365628}
   meleeDamage: 10
   knockBackForce: 150
 --- !u!114 &114123777520579676
