@@ -38,13 +38,21 @@ public class PlayerController : MonoBehaviour
 		float axisVertical = Input.GetAxisRaw("Vertical");
 
 		if(IsEnabled(movement))
+        {
 			movement.Move(axisHorizontal, axisVertical);
+            anim.SetBool("running", axisHorizontal != 0 || axisVertical != 0);
+        }
 	}
 
 	private void Update() 
 	{
         if (Input.GetButton("Shoot") && IsEnabled(gun))
+        {
+            if(!gun.waitFireRate)
+                anim.SetTrigger("shoot");
+
 			gun.Shoot();
+        }
 
         if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
             dashMovement.Dash(transform.forward);
@@ -83,6 +91,8 @@ public class PlayerController : MonoBehaviour
         movement.enabled = false;
         gun.enabled = false;
         lookAtCursor.enabled = false;
+
+        anim.SetBool("dashing", true);
     }
 
     private void DashEnded()
@@ -90,6 +100,8 @@ public class PlayerController : MonoBehaviour
         movement.enabled = true;
         gun.enabled = true;
         lookAtCursor.enabled = true;
+
+        anim.SetBool("dashing", false);
     }
 
     public void SetInputEnabled(bool enable)

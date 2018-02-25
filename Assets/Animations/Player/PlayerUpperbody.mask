@@ -1,0 +1,228 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!319 &31900000
+AvatarMask:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: PlayerUpperbody
+  m_Mask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+  m_Elements:
+  - m_Path: 
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:MESHES
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:body_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:dreads_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:eyes_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:gasmask_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:goggles_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:hairTie_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:poncho_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:MESHES/protag_REFERENCE:scarf_MESH
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_1_1
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_1_1/protag_REFERENCE:coattail_1_2
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_1_1/protag_REFERENCE:coattail_1_2/protag_REFERENCE:coattail_1_3
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_1_1/protag_REFERENCE:coattail_1_2/protag_REFERENCE:coattail_1_3/protag_REFERENCE:coattail_1_4
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_1_1/protag_REFERENCE:coattail_1_2/protag_REFERENCE:coattail_1_3/protag_REFERENCE:coattail_1_4/protag_REFERENCE:coattail_1_5
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_1_1/protag_REFERENCE:coattail_1_2/protag_REFERENCE:coattail_1_3/protag_REFERENCE:coattail_1_4/protag_REFERENCE:coattail_1_5/protag_REFERENCE:coattail_1_6
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_2_1
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_2_1/protag_REFERENCE:coattail_2_2
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_2_1/protag_REFERENCE:coattail_2_2/protag_REFERENCE:coattail_2_3
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_2_1/protag_REFERENCE:coattail_2_2/protag_REFERENCE:coattail_2_3/protag_REFERENCE:coattail_2_4
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_2_1/protag_REFERENCE:coattail_2_2/protag_REFERENCE:coattail_2_3/protag_REFERENCE:coattail_2_4/protag_REFERENCE:coattail_2_5
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_2_1/protag_REFERENCE:coattail_2_2/protag_REFERENCE:coattail_2_3/protag_REFERENCE:coattail_2_4/protag_REFERENCE:coattail_2_5/protag_REFERENCE:coattail_2_6
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_3_1
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_3_1/protag_REFERENCE:coattail_3_2
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_3_1/protag_REFERENCE:coattail_3_2/protag_REFERENCE:coattail_3_3
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_3_1/protag_REFERENCE:coattail_3_2/protag_REFERENCE:coattail_3_3/protag_REFERENCE:coattail_3_4
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_3_1/protag_REFERENCE:coattail_3_2/protag_REFERENCE:coattail_3_3/protag_REFERENCE:coattail_3_4/protag_REFERENCE:coattail_3_5
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:coattail_3_1/protag_REFERENCE:coattail_3_2/protag_REFERENCE:coattail_3_3/protag_REFERENCE:coattail_3_4/protag_REFERENCE:coattail_3_5/protag_REFERENCE:coattail_3_6
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_l_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_l_BONE/protag_REFERENCE:knee_l_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_l_BONE/protag_REFERENCE:knee_l_BONE/protag_REFERENCE:ankle_l_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_l_BONE/protag_REFERENCE:knee_l_BONE/protag_REFERENCE:ankle_l_BONE/protag_REFERENCE:ball_l_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_l_BONE/protag_REFERENCE:knee_l_BONE/protag_REFERENCE:ankle_l_BONE/protag_REFERENCE:ball_l_BONE/protag_REFERENCE:toe_l_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_r_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_r_BONE/protag_REFERENCE:knee_r_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_r_BONE/protag_REFERENCE:knee_r_BONE/protag_REFERENCE:ankle_r_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_r_BONE/protag_REFERENCE:knee_r_BONE/protag_REFERENCE:ankle_r_BONE/protag_REFERENCE:ball_r_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:hip_r_BONE/protag_REFERENCE:knee_r_BONE/protag_REFERENCE:ankle_r_BONE/protag_REFERENCE:ball_r_BONE/protag_REFERENCE:toe_r_BONE
+    m_Weight: 0
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:index_l1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:index_l1/protag_REFERENCE:index_l2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:index_l1/protag_REFERENCE:index_l2/protag_REFERENCE:index_l3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:index_l1/protag_REFERENCE:index_l2/protag_REFERENCE:index_l3/protag_REFERENCE:index_l4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:middle_l1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:middle_l1/protag_REFERENCE:middle_l2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:middle_l1/protag_REFERENCE:middle_l2/protag_REFERENCE:middle_l3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:middle_l1/protag_REFERENCE:middle_l2/protag_REFERENCE:middle_l3/protag_REFERENCE:middle_l4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:pinky_l1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:pinky_l1/protag_REFERENCE:pinky_l2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:pinky_l1/protag_REFERENCE:pinky_l2/protag_REFERENCE:pinky_l3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:pinky_l1/protag_REFERENCE:pinky_l2/protag_REFERENCE:pinky_l3/protag_REFERENCE:pinky_l4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:ring_l1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:ring_l1/protag_REFERENCE:ring_l2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:ring_l1/protag_REFERENCE:ring_l2/protag_REFERENCE:ring_l3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:hand_l_BONE/protag_REFERENCE:ring_l1/protag_REFERENCE:ring_l2/protag_REFERENCE:ring_l3/protag_REFERENCE:ring_l4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:thumb_l_1_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_l_BONE/protag_REFERENCE:shoulder_l_BONE/protag_REFERENCE:elbow_l_BONE/protag_REFERENCE:wrist_l_BONE/protag_REFERENCE:thumb_l_1_BONE/protag_REFERENCE:thumb_l_2_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:index_r1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:index_r1/protag_REFERENCE:index_r2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:index_r1/protag_REFERENCE:index_r2/protag_REFERENCE:index_r3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:index_r1/protag_REFERENCE:index_r2/protag_REFERENCE:index_r3/protag_REFERENCE:index_r4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:middle_r1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:middle_r1/protag_REFERENCE:middle_r2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:middle_r1/protag_REFERENCE:middle_r2/protag_REFERENCE:middle_r3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:middle_r1/protag_REFERENCE:middle_r2/protag_REFERENCE:middle_r3/protag_REFERENCE:middle_r4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:pinky_r1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:pinky_r1/protag_REFERENCE:pinky_r2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:pinky_r1/protag_REFERENCE:pinky_r2/protag_REFERENCE:pinky_r3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:pinky_r1/protag_REFERENCE:pinky_r2/protag_REFERENCE:pinky_r3/protag_REFERENCE:pinky_r4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:ring_r1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:ring_r1/protag_REFERENCE:ring_r2
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:ring_r1/protag_REFERENCE:ring_r2/protag_REFERENCE:ring_r3
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:hand_r_BONE/protag_REFERENCE:ring_r1/protag_REFERENCE:ring_r2/protag_REFERENCE:ring_r3/protag_REFERENCE:ring_r4
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:thumb_r_1_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:clavicle_r_BONE/protag_REFERENCE:shoulder_r_BONE/protag_REFERENCE:elbow_r_BONE/protag_REFERENCE:wrist_r_BONE/protag_REFERENCE:thumb_r_1_BONE/protag_REFERENCE:thumb_r_2_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:mask_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:mask_BONE/protag_REFERENCE:mask_TIP
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30/protag_REFERENCE:joint31
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30/protag_REFERENCE:joint31/protag_REFERENCE:joint32
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30/protag_REFERENCE:joint31/protag_REFERENCE:joint32/protag_REFERENCE:joint33
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30/protag_REFERENCE:joint31/protag_REFERENCE:joint32/protag_REFERENCE:joint33/protag_REFERENCE:joint34
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30/protag_REFERENCE:joint31/protag_REFERENCE:joint32/protag_REFERENCE:joint33/protag_REFERENCE:joint34/protag_REFERENCE:joint35
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:scarf1/protag_REFERENCE:joint28/protag_REFERENCE:joint29/protag_REFERENCE:joint30/protag_REFERENCE:joint31/protag_REFERENCE:joint32/protag_REFERENCE:joint33/protag_REFERENCE:joint34/protag_REFERENCE:joint35/protag_REFERENCE:joint36
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE/protag_REFERENCE:head_BONE
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE/protag_REFERENCE:head_BONE/protag_REFERENCE:joint37
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE/protag_REFERENCE:head_BONE/protag_REFERENCE:joint37/protag_REFERENCE:joint38
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE/protag_REFERENCE:head_BONE/protag_REFERENCE:joint39
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE/protag_REFERENCE:head_BONE/protag_REFERENCE:joint39/protag_REFERENCE:joint40
+    m_Weight: 1
+  - m_Path: protag_REFERENCE:SKEL/protag_REFERENCE:root/protag_REFERENCE:spine_1_BONE/protag_REFERENCE:spine_2_BONE/protag_REFERENCE:spine_3_BONE/protag_REFERENCE:spine_4_BONE/protag_REFERENCE:neck_BONE/protag_REFERENCE:head_BONE/protag_REFERENCE:joint39/protag_REFERENCE:joint40/protag_REFERENCE:joint41
+    m_Weight: 1
