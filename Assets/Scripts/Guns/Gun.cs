@@ -19,6 +19,11 @@ public class Gun : MonoBehaviour
 		shotOrigin = transform.Find("ShotOrigin");
 	}
 
+    private void OnDisable() 
+    {
+        waitFireRate = false;    
+    }
+
 	public void Shoot()
 	{
 		if(!waitFireRate)
@@ -30,10 +35,11 @@ public class Gun : MonoBehaviour
 		waitFireRate = true;
 
         WeaponShoot();
-
+        Debug.Log("WAITING FIRERATE" + waitFireRate);
 		yield return new WaitForSeconds(m_Weapon.FireRate);
-
+        
 		waitFireRate = false;
+        Debug.Log("WAITING FIRERATE" + waitFireRate);
 	}
 
 

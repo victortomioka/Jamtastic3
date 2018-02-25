@@ -67,7 +67,6 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButton("Shoot"))
         {
             SetShootAnim();
-
         }
         if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
             dashMovement.Dash(transform.forward);
@@ -161,11 +160,15 @@ public class PlayerController : MonoBehaviour
         {
             case Weapon.WeaponCategory.PrimaryWeapon:
                 if (!primaryWeapon.gun.waitFireRate)
+                {
                     anim.SetTrigger("shoot");
+                }    
                 break;
             case Weapon.WeaponCategory.SecondaryWeapon:
                 if (!secondaryWeapon.gun.waitFireRate)
+                {
                     anim.SetTrigger("shoot");
+                }
                 break;
         }
     }
