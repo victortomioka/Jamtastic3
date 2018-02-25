@@ -29,7 +29,7 @@ public class Gun : MonoBehaviour
 	{
 		waitFireRate = true;
 
-        SpawnBullet();
+        WeaponShoot();
 
 		yield return new WaitForSeconds(m_Weapon.FireRate);
 

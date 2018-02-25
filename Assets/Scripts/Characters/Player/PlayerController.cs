@@ -66,9 +66,9 @@ public class PlayerController : MonoBehaviour
 	{
         if (Input.GetButton("Shoot"))
         {
-            ShootWeapon(selectedWeapon);
-        }
+            SetShootAnim();
 
+        }
         if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
             dashMovement.Dash(transform.forward);
 
@@ -87,7 +87,10 @@ public class PlayerController : MonoBehaviour
 			else
 				GameManager.Instance.Pause();
 		}
-	}
+
+        SetIsShooting();
+
+    }
 
     public void AttackStart()
     {
@@ -153,19 +156,39 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("shotgun", category == Weapon.WeaponCategory.SecondaryWeapon);
     }
 
-    private void ShootWeapon(Weapon.WeaponCategory category)
+
+
+    private void SetShootAnim()
     {
-        switch (category)
+        switch (selectedWeapon)
+        {
+            case Weapon.WeaponCategory.PrimaryWeapon:
+                if (!primaryWeapon.gun.waitFireRate)
+                    anim.SetTrigger("shoot");
+                break;
+            case Weapon.WeaponCategory.SecondaryWeapon:
+                if (!secondaryWeapon.gun.waitFireRate)
+                    anim.SetTrigger("shoot");
+                break;
+        }
+    }
+
+    void SetIsShooting()
+    {
+        anim.SetBool("IsShooting", Input.GetButton("Shoot"));
+    }
+
+    public void ShootWeapon()
+    {
+        switch (selectedWeapon)
         {
             case Weapon.WeaponCategory.PrimaryWeapon:
                 if(!primaryWeapon.gun.waitFireRate)
-                    anim.SetTrigger("shoot");
                     
                 primaryWeapon.gun.Shoot(); 
                 break;
             case Weapon.WeaponCategory.SecondaryWeapon:
                 if(!secondaryWeapon.gun.waitFireRate)
-                    anim.SetTrigger("shoot");
 
                 secondaryWeapon.gun.Shoot();
                 break;
