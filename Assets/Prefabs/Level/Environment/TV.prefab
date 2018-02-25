@@ -22,13 +22,12 @@ GameObject:
   - component: {fileID: 33192962176408784}
   - component: {fileID: 23340656006703818}
   - component: {fileID: 54163368189365182}
-  - component: {fileID: 65638865339482944}
   - component: {fileID: 64079379605957480}
   m_Layer: 0
   m_Name: TV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
+  m_NavMeshLayer: 1
   m_StaticEditorFlags: 0
   m_IsActive: 1
 --- !u!4 &4093872073349866
@@ -37,13 +36,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1582304491874234}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 11.237313, y: 0.6733539, z: -2.5088234}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: 0.61170745, z: -0, w: 0.7910841}
+  m_LocalPosition: {x: 47.945717, y: -17.161613, z: -27.466534}
+  m_LocalScale: {x: 2.695752, y: 2.6957521, z: 2.6957526}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 75.426, z: 0}
 --- !u!23 &23340656006703818
 MeshRenderer:
   m_ObjectHideFlags: 1
@@ -111,19 +110,7 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 14
   m_SkinWidth: 0.01
   m_Mesh: {fileID: 4300000, guid: dfd2cfaf9b1241440868f1d3b2e70370, type: 3}
---- !u!65 &65638865339482944
-BoxCollider:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1582304491874234}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5547171, y: 0.84670794, z: 0.5645418}
-  m_Center: {x: -0.0000048577785, y: 0.000000074505806, z: 0.0049161166}

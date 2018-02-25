@@ -169,6 +169,7 @@ GameObject:
   - component: {fileID: 4643896717138532}
   - component: {fileID: 95444539586217300}
   - component: {fileID: 135229455311475740}
+  - component: {fileID: 114746873348334928}
   m_Layer: 11
   m_Name: PickupShotgun
   m_TagString: Untagged
@@ -694,6 +695,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &114746873348334928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1894773501764480}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bbfee2be5a3bc448ccadc557940b83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  category: 1
 --- !u!135 &135229455311475740
 SphereCollider:
   m_ObjectHideFlags: 1

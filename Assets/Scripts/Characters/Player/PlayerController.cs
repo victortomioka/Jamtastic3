@@ -27,7 +27,12 @@ public class PlayerController : MonoBehaviour
     public float meleeDamage;
     public float knockBackForce;
 
-    private bool attacking;    
+    [HideInInspector] public bool primaryWeaponAvailable;
+    [HideInInspector] public bool secondaryWeaponAvailable;
+    public bool HasWeaponAvailable { get { return primaryWeaponAvailable || secondaryWeaponAvailable; } }
+    public bool BothWeaponAvailable { get { return primaryWeaponAvailable && secondaryWeaponAvailable; } }
+
+    private bool attacking;
     private int groundLayer;
     private Weapon.WeaponCategory selectedWeapon;
     
@@ -40,7 +45,10 @@ public class PlayerController : MonoBehaviour
 
         anim = GetComponentInChildren<Animator>();
 
-        SetSelectedWeapon(Weapon.WeaponCategory.PrimaryWeapon);
+        primaryWeapon.SetActive(false);
+        secondaryWeapon.SetActive(false);
+        
+        // SetSelectedWeapon(Weapon.WeaponCategory.PrimaryWeapon);
     }
 
     private void Reset() 
@@ -64,7 +72,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Update() 
 	{
-        if (Input.GetButton("Shoot"))
+        if (Input.GetButton("Shoot") && HasWeaponAvailable)
         {
             SetShootAnim();
         }
@@ -74,7 +82,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetButtonDown("Melee") && !attacking && !dashMovement.IsDashing)
             AttackStart();
 
-        if(Input.GetButtonDown("SwitchWeapon") && !attacking && !dashMovement.IsDashing)
+        if(Input.GetButtonDown("SwitchWeapon") && !attacking && !dashMovement.IsDashing && BothWeaponAvailable)
         {
             SwitchWeapon();   
         }
@@ -193,6 +201,21 @@ public class PlayerController : MonoBehaviour
                 secondaryWeapon.gun.Shoot();
                 break;
         }   
+    }
+
+    public void SetWeaponAvailable(Weapon.WeaponCategory category)
+    {
+        switch (category)
+        {
+            case Weapon.WeaponCategory.PrimaryWeapon: 
+                primaryWeaponAvailable = true; 
+                SetSelectedWeapon(category);
+                break;
+            case Weapon.WeaponCategory.SecondaryWeapon: 
+                secondaryWeaponAvailable = true;
+                SetSelectedWeapon(category);
+                break;
+        }
     }
 
 	private bool IsEnabled(MonoBehaviour component)
