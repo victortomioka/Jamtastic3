@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4749762125502276}
   - component: {fileID: 33762493321960268}
   - component: {fileID: 23936255732880232}
+  - component: {fileID: 65332317931448418}
   m_Layer: 0
   m_Name: Sucata04
   m_TagString: Untagged
@@ -83,3 +84,15 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1797612687037976}
   m_Mesh: {fileID: 4300000, guid: 7c6cb6b17f8b4fd47868f6dc581af44d, type: 3}
+--- !u!65 &65332317931448418
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1797612687037976}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.6000004, y: 0.33186936, z: 0.6000002}
+  m_Center: {x: -30.44867, y: 0.75003994, z: 0.20966658}
