@@ -4623,7 +4623,7 @@ MonoBehaviour:
     type: 2}
   shotOrigin: {fileID: 4658149004495358}
   waitFireRate: 0
-  m_Weapon: {fileID: 11400000, guid: 261117b76936842449aa30d22c52448b, type: 2}
+  m_Weapon: {fileID: 11400000, guid: b9eef2f416d42a74db40d3eee086c36e, type: 2}
 --- !u!114 &114295741352405238
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4652,7 +4652,7 @@ MonoBehaviour:
     type: 2}
   shotOrigin: {fileID: 4096843019122706}
   waitFireRate: 0
-  m_Weapon: {fileID: 11400000, guid: bcdd489d66f0c674aa92d3e4faa087a1, type: 2}
+  m_Weapon: {fileID: 11400000, guid: 82b5c407d4143d244b51e6d0a50e2907, type: 2}
 --- !u!114 &114862039420965094
 MonoBehaviour:
   m_ObjectHideFlags: 1
