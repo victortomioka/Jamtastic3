@@ -29,6 +29,13 @@ public class EnemyMelee : EnemyCharacter
         coll = GetComponent<Collider>();
         followTarget = GetComponent<FollowTarget>();
         lookAt = GetComponent<LookAt>();
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        if(player != null)
+        {
+            followTarget.target = player.transform;
+            lookAt.target = player.transform;
+        }
     }
 
     private void Update()

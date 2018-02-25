@@ -3048,15 +3048,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684774184531580}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.886, y: 2.107, z: -10.89}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -34.8, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4919611262661794}
   - {fileID: 4002561700174612}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
 --- !u!4 &4557853570361094
 Transform:
   m_ObjectHideFlags: 1
@@ -4540,7 +4540,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movement: {fileID: 114295741352405238}
-  gun: {fileID: 0}
+  primaryWeapon:
+    gun: {fileID: 114559485101061528}
+    physicalGun: {fileID: 1565063600132896}
+  secondaryWeapon:
+    gun: {fileID: 114215050690635854}
+    physicalGun: {fileID: 1439739559040674}
   dashMovement: {fileID: 114862039420965094}
   lookAtCursor: {fileID: 114006459974365628}
   meleeDamage: 10
@@ -4627,7 +4632,7 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.5
+  m_Radius: 0.6
   m_Height: 3
   m_Direction: 1
   m_Center: {x: 0, y: 1.5, z: 0}

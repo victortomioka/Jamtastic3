@@ -156,8 +156,6 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("shotgun", category == Weapon.WeaponCategory.SecondaryWeapon);
     }
 
-
-
     private void SetShootAnim()
     {
         switch (selectedWeapon)
