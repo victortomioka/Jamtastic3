@@ -6,7 +6,9 @@ public class LookAtCursor : MonoBehaviour
 {
 	public Camera cam;
 
+	public Transform crossHair;
 	[HideInInspector] public Vector3 lookDirection;
+	[HideInInspector] public Vector3 mousePos;
 
 	private Plane groundPlane;
 
@@ -23,11 +25,14 @@ public class LookAtCursor : MonoBehaviour
 	private void Update() 
 	{
 		Ray ray = cam.ScreenPointToRay(Input.mousePosition);
+		mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
 		float enter;
 		if(groundPlane.Raycast(ray, out enter))
 		{
 			Vector3 hitPoint = ray.GetPoint(enter);
+			if(crossHair != null)
+				crossHair.position = new Vector3(hitPoint.x, crossHair.position.y, hitPoint.z);
 			Vector3 lookDirection = (hitPoint - transform.position).normalized;
 			lookDirection.y = 0;
 

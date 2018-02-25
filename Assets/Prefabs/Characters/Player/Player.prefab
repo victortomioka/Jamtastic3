@@ -1926,7 +1926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!1 &1962672016589336
 GameObject:
   m_ObjectHideFlags: 1
@@ -4559,7 +4559,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
+  crossHair: {fileID: 0}
   lookDirection: {x: 0, y: 0, z: 0}
+  mousePos: {x: 0, y: 0, z: 0}
 --- !u!114 &114038369344372334
 MonoBehaviour:
   m_ObjectHideFlags: 1

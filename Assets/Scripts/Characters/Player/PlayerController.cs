@@ -89,7 +89,6 @@ public class PlayerController : MonoBehaviour
 		}
 
         SetIsShooting();
-
     }
 
     public void AttackStart()
