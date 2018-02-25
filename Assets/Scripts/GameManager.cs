@@ -32,15 +32,9 @@ public class GameManager : MonoBehaviour
 			panelGameOver = ui.transform.Find("Panel_GameOver").gameObject;
 		}
 	}
-	
-	private void Start() 
-	{
-		HideCursor();
-	}
 
 	public void Pause()
 	{
-		ShowCursor();
 		controller.SetInputEnabled(false);
 
 		Time.timeScale = 0;
@@ -51,7 +45,6 @@ public class GameManager : MonoBehaviour
 
 	public void Resume()
 	{
-		HideCursor();
 		controller.SetInputEnabled(true);
 
 		Time.timeScale = 1;
@@ -62,7 +55,6 @@ public class GameManager : MonoBehaviour
 
 	public void GameOver()
 	{
-		ShowCursor();
 		controller.SetInputEnabled(false);
 
 		Debug.Log(panelGameOver);
