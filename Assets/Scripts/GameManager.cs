@@ -8,6 +8,10 @@ public class GameManager : MonoBehaviour
 	public GameObject panelPause;
 	public GameObject panelGameOver;
 
+	[Header("Audio")]
+	public AudioSource musicAudioSource;
+	public AudioClip gameOverTheme;
+
 	private PlayerController controller;
 
 	public static bool IsPaused { get { return Time.timeScale == 0; } }
@@ -68,9 +72,14 @@ public class GameManager : MonoBehaviour
 
 		controller.SetInputEnabled(false);
 
-		Debug.Log(panelGameOver);
 		if(panelGameOver != null)
 			panelGameOver.SetActive(true);
+
+		if(musicAudioSource != null)
+		{
+			musicAudioSource.Stop();
+			musicAudioSource.PlayOneShot(gameOverTheme);
+		}
 	}
 
 	public void ShowCursor()

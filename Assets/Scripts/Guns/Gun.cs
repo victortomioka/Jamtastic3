@@ -35,11 +35,10 @@ public class Gun : MonoBehaviour
 		waitFireRate = true;
 
         WeaponShoot();
-        Debug.Log("WAITING FIRERATE" + waitFireRate);
+
 		yield return new WaitForSeconds(m_Weapon.FireRate);
         
 		waitFireRate = false;
-        Debug.Log("WAITING FIRERATE" + waitFireRate);
 	}
 
 
