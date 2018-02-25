@@ -7558,6 +7558,7 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1980386461891036, guid: 069c6911a27c15640ac1c9284803c724,
     type: 2}
   shotOrigin: {fileID: 4990231569525550}
+  waitFireRate: 0
   m_Weapon: {fileID: 11400000, guid: 261117b76936842449aa30d22c52448b, type: 2}
 --- !u!114 &114284081415236850
 MonoBehaviour:

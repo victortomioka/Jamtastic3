@@ -7,22 +7,17 @@ public class Gun : MonoBehaviour
 	public float fireRate;
 
 	public GameObject bulletPrefab;
-	private Transform shotOrigin;
+	public Transform shotOrigin;
 
 	[HideInInspector] public bool waitFireRate;
 
     [SerializeField]
     protected Weapon m_Weapon;
 
-	// private void Reset() 
-	// {
-	// 	shotOrigin = transform.Find("ShotOrigin");
-	// }
-
-    private void Start() 
-    {
-        shotOrigin = GameObject.Find("ShotOrigin").transform;
-    }
+	private void Reset() 
+	{
+		shotOrigin = transform.Find("ShotOrigin");
+	}
 
 	public void Shoot()
 	{

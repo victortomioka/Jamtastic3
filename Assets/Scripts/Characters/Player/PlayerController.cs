@@ -2,10 +2,25 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+[System.Serializable]
+public struct WeaponSlot
+{
+    public Gun gun;
+    public GameObject physicalGun;
+
+    public void SetActive(bool active)
+    {
+        gun.gameObject.SetActive(active);
+        physicalGun.SetActive(active);
+    }
+}
+
 public class PlayerController : MonoBehaviour 
 {
 	public PlayerMovement movement;
-	public Gun gun;
+    public WeaponSlot primaryWeapon;
+    public WeaponSlot secondaryWeapon;
+
     public DashMovement dashMovement;
     public LookAtCursor lookAtCursor;
     
@@ -14,6 +29,8 @@ public class PlayerController : MonoBehaviour
 
     private bool attacking;    
     private int groundLayer;
+    private Weapon.WeaponCategory selectedWeapon;
+    
 
     private Animator anim;
 
@@ -22,12 +39,13 @@ public class PlayerController : MonoBehaviour
         groundLayer = LayerMask.NameToLayer("Ground");
 
         anim = GetComponentInChildren<Animator>();
+
+        SetSelectedWeapon(Weapon.WeaponCategory.PrimaryWeapon);
     }
 
     private void Reset() 
 	{
 		movement = GetComponent<PlayerMovement>();
-		gun = GetComponentInChildren<Gun>();
         dashMovement = GetComponent<DashMovement>();
         lookAtCursor = GetComponent<LookAtCursor>();
     }
@@ -46,12 +64,9 @@ public class PlayerController : MonoBehaviour
 
 	private void Update() 
 	{
-        if (Input.GetButton("Shoot") && IsEnabled(gun))
+        if (Input.GetButton("Shoot"))
         {
-            if(!gun.waitFireRate)
-                anim.SetTrigger("shoot");
-
-			gun.Shoot();
+            ShootWeapon(selectedWeapon);
         }
 
         if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
@@ -59,6 +74,11 @@ public class PlayerController : MonoBehaviour
 
         if(Input.GetButtonDown("Melee") && !attacking && !dashMovement.IsDashing)
             AttackStart();
+
+        if(Input.GetButtonDown("SwitchWeapon") && !attacking && !dashMovement.IsDashing)
+        {
+            SwitchWeapon();   
+        }
 
         if(Input.GetButtonDown("Cancel"))
 		{
@@ -75,7 +95,8 @@ public class PlayerController : MonoBehaviour
         attacking = true;
 
         movement.enabled = false;
-        gun.enabled = false;
+        primaryWeapon.gun.enabled = false;
+        secondaryWeapon.gun.enabled = false;
     }
 
     public void AttackEnd()
@@ -83,13 +104,15 @@ public class PlayerController : MonoBehaviour
         attacking = false;
 
         movement.enabled = true;
-        gun.enabled = true;
+        primaryWeapon.gun.enabled = true;
+        secondaryWeapon.gun.enabled = true;
     }
 
     private void DashStarted()
     {
         movement.enabled = false;
-        gun.enabled = false;
+        primaryWeapon.gun.enabled = false;
+        secondaryWeapon.gun.enabled = false;
         lookAtCursor.enabled = false;
 
         anim.SetBool("dashing", true);
@@ -98,7 +121,8 @@ public class PlayerController : MonoBehaviour
     private void DashEnded()
     {
         movement.enabled = true;
-        gun.enabled = true;
+        primaryWeapon.gun.enabled = true;
+        secondaryWeapon.gun.enabled = true;
         lookAtCursor.enabled = true;
 
         anim.SetBool("dashing", false);
@@ -108,6 +132,44 @@ public class PlayerController : MonoBehaviour
     {
         lookAtCursor.enabled = enable;
         enabled = enable;
+    }
+
+    private void SwitchWeapon()
+    {
+        if(selectedWeapon == Weapon.WeaponCategory.PrimaryWeapon)
+            SetSelectedWeapon(Weapon.WeaponCategory.SecondaryWeapon);
+        else
+            SetSelectedWeapon(Weapon.WeaponCategory.PrimaryWeapon);
+    }
+
+    private void SetSelectedWeapon(Weapon.WeaponCategory category)
+    {
+        selectedWeapon = category;
+
+        primaryWeapon.SetActive(category == Weapon.WeaponCategory.PrimaryWeapon);
+        secondaryWeapon.SetActive(category == Weapon.WeaponCategory.SecondaryWeapon);
+
+        anim.SetBool("pistol", category == Weapon.WeaponCategory.PrimaryWeapon);
+        anim.SetBool("shotgun", category == Weapon.WeaponCategory.SecondaryWeapon);
+    }
+
+    private void ShootWeapon(Weapon.WeaponCategory category)
+    {
+        switch (category)
+        {
+            case Weapon.WeaponCategory.PrimaryWeapon:
+                if(!primaryWeapon.gun.waitFireRate)
+                    anim.SetTrigger("shoot");
+                    
+                primaryWeapon.gun.Shoot(); 
+                break;
+            case Weapon.WeaponCategory.SecondaryWeapon:
+                if(!secondaryWeapon.gun.waitFireRate)
+                    anim.SetTrigger("shoot");
+
+                secondaryWeapon.gun.Shoot();
+                break;
+        }   
     }
 
 	private bool IsEnabled(MonoBehaviour component)
