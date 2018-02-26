@@ -49,6 +49,8 @@ public class PlayerController : MonoBehaviour
         secondaryWeapon.SetActive(false);
         
         // SetSelectedWeapon(Weapon.WeaponCategory.PrimaryWeapon);
+
+        GameManager.Instance.SetWeaponsUI(Weapon.WeaponCategory.PrimaryWeapon, primaryWeaponAvailable, secondaryWeaponAvailable);
     }
 
     private void Reset() 
@@ -160,6 +162,8 @@ public class PlayerController : MonoBehaviour
 
         anim.SetBool("pistol", category == Weapon.WeaponCategory.PrimaryWeapon);
         anim.SetBool("shotgun", category == Weapon.WeaponCategory.SecondaryWeapon);
+
+        GameManager.Instance.SetWeaponsUI(category, primaryWeaponAvailable, secondaryWeaponAvailable);
     }
 
     private void SetShootAnim()

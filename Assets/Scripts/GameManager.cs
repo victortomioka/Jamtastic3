@@ -1,12 +1,20 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour 
 {
 	[Header("UI")]
 	public GameObject panelPause;
 	public GameObject panelGameOver;
+
+	public Image primarySlot;
+	public Image secondarySlot;
+	public Image iconPistol;
+	public Image iconShotgun;
+	public Sprite slotNormal;
+	public Sprite slotSelected;
 
 	[Header("Audio")]
 	public AudioSource musicAudioSource;
@@ -79,6 +87,34 @@ public class GameManager : MonoBehaviour
 		{
 			musicAudioSource.Stop();
 			musicAudioSource.PlayOneShot(gameOverTheme);
+		}
+	}
+
+	public void SetWeaponsUI(Weapon.WeaponCategory selected, bool primarySlotAvailable, bool secondarySlotAvailable)
+	{
+		if(!primarySlotAvailable && !secondarySlotAvailable)
+		{
+			iconPistol.enabled = false;
+			iconShotgun.enabled = false;
+		}
+		else
+		{
+			if(primarySlotAvailable)
+				iconPistol.enabled = true;
+
+			if(secondarySlotAvailable)
+				iconShotgun.enabled = true;
+
+			if(selected == Weapon.WeaponCategory.PrimaryWeapon)
+			{
+				primarySlot.sprite = slotSelected;
+				secondarySlot.sprite = slotNormal;
+			}
+			else
+			{
+				primarySlot.sprite = slotNormal;
+				secondarySlot.sprite = slotSelected;
+			}
 		}
 	}
 

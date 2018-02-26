@@ -19,6 +19,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4587314403294824}
+  - component: {fileID: 122335921360150564}
   m_Layer: 0
   m_Name: KS23_MESH
   m_TagString: Untagged
@@ -287,7 +288,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1894773501764480}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 16, y: 1, z: -8}
+  m_LocalPosition: {x: -55.79, y: -0.24, z: 6.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4553735752832378}
@@ -707,6 +708,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   category: 1
+--- !u!122 &122335921360150564
+Halo:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1203513492745296}
+  m_Enabled: 1
+  m_Color:
+    serializedVersion: 2
+    rgba: 4280837912
+  m_Size: 2
 --- !u!135 &135229455311475740
 SphereCollider:
   m_ObjectHideFlags: 1
