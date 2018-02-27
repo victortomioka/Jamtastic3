@@ -5,38 +5,34 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCharacter : Character
 {
-    public Gun[] slots;
-
-    private int selectedSlot;
-
     private Animator anim;
     private PlayerController controller;
+    private PlayerSoundEffects sfx;
+
+    private bool dead;
 
     protected void Start()
     {
-        slots = new Gun[2];
-
         anim = GetComponentInChildren<Animator>();
         controller = GetComponent<PlayerController>();
-    }
-
-    public void SetWeapon(Gun weapon, int slotIndex)
-    {
-        if(slotIndex >= slots.Length)
-            return;
-
-        slots[slotIndex] = weapon;
+        sfx = GetComponentInChildren<PlayerSoundEffects>();
     }
 
     public override void TakeHit(float damage)
     {
+        if(dead)
+            return;
+
+        sfx.Play(sfx.clipsHit);
 		Die();
     }
 
 	protected override void Die()
 	{
+        dead = true;
         controller.SetInputEnabled(false);
         anim.SetTrigger("die");
+        sfx.Play(sfx.clipDie);
 	}
 
     private void DieAnimationEnd()

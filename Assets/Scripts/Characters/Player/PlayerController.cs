@@ -38,12 +38,14 @@ public class PlayerController : MonoBehaviour
     
 
     private Animator anim;
+    private PlayerSoundEffects sfx;
 
     private void Start() 
     {
         groundLayer = LayerMask.NameToLayer("Ground");
 
         anim = GetComponentInChildren<Animator>();
+        sfx = GetComponentInChildren<PlayerSoundEffects>();
 
         primaryWeapon.SetActive(false);
         secondaryWeapon.SetActive(false);
@@ -103,6 +105,8 @@ public class PlayerController : MonoBehaviour
     public void AttackStart()
     {
         anim.SetTrigger("attack");
+        sfx.Play(sfx.clipAttackMelee);
+
         attacking = true;
 
         movement.enabled = false;
@@ -127,6 +131,7 @@ public class PlayerController : MonoBehaviour
         lookAtCursor.enabled = false;
 
         anim.SetBool("dashing", true);
+        sfx.Play(sfx.clipDash);
     }
 
     private void DashEnded()
@@ -163,6 +168,8 @@ public class PlayerController : MonoBehaviour
         anim.SetBool("pistol", category == Weapon.WeaponCategory.PrimaryWeapon);
         anim.SetBool("shotgun", category == Weapon.WeaponCategory.SecondaryWeapon);
 
+        sfx.Play(category == Weapon.WeaponCategory.PrimaryWeapon ? sfx.clipSwitchPistol : sfx.clipSwitchShotgun);
+
         GameManager.Instance.SetWeaponsUI(category, primaryWeaponAvailable, secondaryWeaponAvailable);
     }
 
@@ -198,13 +205,15 @@ public class PlayerController : MonoBehaviour
                 if(!primaryWeapon.gun.waitFireRate)
                     
                 primaryWeapon.gun.Shoot(); 
+                sfx.Play(sfx.clipShotPistol);
                 break;
             case Weapon.WeaponCategory.SecondaryWeapon:
                 if(!secondaryWeapon.gun.waitFireRate)
 
                 secondaryWeapon.gun.Shoot();
+                sfx.Play(sfx.clipShotShotgun);
                 break;
-        }   
+        }
     }
 
     public void SetWeaponAvailable(Weapon.WeaponCategory category)
@@ -245,6 +254,7 @@ public class PlayerController : MonoBehaviour
             if(enemy != null)
             {
                 enemy.KnockBack(knockBackForce, -enemy.transform.forward);
+                sfx.Play(sfx.clipsMeleeHit);
 
                 IDamageable dmg = enemy.gameObject.GetComponent<IDamageable>();
                 if(dmg != null)

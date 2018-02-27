@@ -17,6 +17,7 @@ public class EnemyRanged : EnemyCharacter
     private FollowTarget followTarget;
     private LookAt lookAt;
 	private Gun gun;
+    private EnemySoundEffects sfx;
     
 
     protected override void Start()
@@ -30,6 +31,7 @@ public class EnemyRanged : EnemyCharacter
         followTarget = GetComponent<FollowTarget>();
 		gun = GetComponentInChildren<Gun>();
         lookAt = GetComponent<LookAt>();
+        sfx = GetComponentInChildren<EnemySoundEffects>();
         
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if(player != null)
@@ -88,6 +90,7 @@ public class EnemyRanged : EnemyCharacter
 
 	public void Shoot()
 	{
+        sfx.Play(sfx.clipShot);
 		gun.Shoot();
 	}
 
@@ -102,6 +105,9 @@ public class EnemyRanged : EnemyCharacter
         }
         
         base.TakeHit(damage);
+
+        if(!dead)
+            sfx.Play(sfx.clipsHit);
     }
 
     protected override void Die()
@@ -111,6 +117,8 @@ public class EnemyRanged : EnemyCharacter
 
         coll.enabled = false;
         lookAt.enabled = false;
+
+        sfx.Play(sfx.clipDie);
 
         Stop();
         

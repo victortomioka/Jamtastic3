@@ -17,6 +17,7 @@ public class EnemyMelee : EnemyCharacter
     private Collider coll;
     private FollowTarget followTarget;
     private LookAt lookAt;
+    private EnemySoundEffects sfx;
     
 
     protected override void Start()
@@ -29,6 +30,7 @@ public class EnemyMelee : EnemyCharacter
         coll = GetComponent<Collider>();
         followTarget = GetComponent<FollowTarget>();
         lookAt = GetComponent<LookAt>();
+        sfx = GetComponentInChildren<EnemySoundEffects>();
 
         GameObject player = GameObject.FindGameObjectWithTag("Player");
         if(player != null)
@@ -72,6 +74,11 @@ public class EnemyMelee : EnemyCharacter
         Stop();
     }
 
+    public void AttackHit()
+    {
+        sfx.Play(sfx.clipAttackMelee);
+    }
+
     public void AttackEnd()
     {
         busy = false;
@@ -97,6 +104,9 @@ public class EnemyMelee : EnemyCharacter
         }
         
         base.TakeHit(damage);
+
+        if(!dead)
+            sfx.Play(sfx.clipsHit);
     }
 
     protected override void Die()
@@ -106,6 +116,8 @@ public class EnemyMelee : EnemyCharacter
 
         coll.enabled = false;
         lookAt.enabled = false;
+
+        sfx.Play(sfx.clipDie);
 
         Stop();
         
@@ -129,7 +141,10 @@ public class EnemyMelee : EnemyCharacter
         {
             IDamageable dmg = other.gameObject.GetComponent<IDamageable>();
             if(dmg != null)
+            {
+                sfx.Play(sfx.clipsMeleeHit);
                 dmg.TakeHit(1);
+            }
         }
     }
 

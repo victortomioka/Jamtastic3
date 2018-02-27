@@ -60,6 +60,8 @@ public class GameManager : MonoBehaviour
 
 		if(panelPause != null)
 			panelPause.SetActive(true);
+
+		PlayerSound(GlobalSoundEffects.Instance.blipOut);
 	}
 
 	public void Resume()
@@ -72,6 +74,8 @@ public class GameManager : MonoBehaviour
 
 		if(panelPause != null)
 			panelPause.SetActive(false);
+
+		PlayerSound(GlobalSoundEffects.Instance.blipOut);
 	}
 
 	public void GameOver()
@@ -126,5 +130,11 @@ public class GameManager : MonoBehaviour
 	public void HideCursor()
 	{
 		Cursor.visible = false;
+	}
+
+	private void PlayerSound(AudioClip clip)
+	{
+		if(GlobalSoundEffects.Instance != null)
+			GlobalSoundEffects.Instance.Play(clip);
 	}
 }
