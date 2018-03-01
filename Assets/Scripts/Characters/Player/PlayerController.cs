@@ -236,15 +236,6 @@ public class PlayerController : MonoBehaviour
 		return component != null && component.enabled;
 	}
 
-    private void OnCollisionStay(Collision other) 
-    {
-        if(other.gameObject.layer == groundLayer)
-            return;
-
-        if (dashMovement.IsDashing)
-            dashMovement.Interrupt();
-    }
-
     private void OnTriggerEnter(Collider other) 
     {
         if(other.CompareTag("Enemy"))
