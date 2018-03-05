@@ -57,10 +57,6 @@ Preset:
     value: 
     objectReference: {fileID: 0}
   - target: {fileID: 0}
-    propertyPath: m_PositionBlending
-    value: 0
-    objectReference: {fileID: 0}
-  - target: {fileID: 0}
     propertyPath: m_Lens.FieldOfView
     value: 40
     objectReference: {fileID: 0}
@@ -70,7 +66,7 @@ Preset:
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Lens.NearClipPlane
-    value: 0.1
+    value: 0.01
     objectReference: {fileID: 0}
   - target: {fileID: 0}
     propertyPath: m_Lens.FarClipPlane
