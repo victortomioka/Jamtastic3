@@ -2,7 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public interface IDamageable
+namespace Carnapunk.SaintCarnage.Interfaces
 {
-	void TakeHit(float damage);
+    /// <summary>
+    /// Interface para objetos que podem receber dano.
+    /// </summary>
+    public interface IDamageable
+    {
+        void TakeHit(float damage);
+    }
 }

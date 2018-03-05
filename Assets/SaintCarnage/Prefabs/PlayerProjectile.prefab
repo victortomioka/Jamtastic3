@@ -23,7 +23,6 @@ GameObject:
   - component: {fileID: 23900199545210082}
   - component: {fileID: 54034746808285754}
   - component: {fileID: 135549853623702256}
-  - component: {fileID: 114415259928146914}
   - component: {fileID: 114820289229191420}
   m_Layer: 13
   m_Name: PlayerProjectile
@@ -102,19 +101,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 2
---- !u!114 &114415259928146914
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1980386461891036}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bc1975dd217f34f4fbeac98bc2a73b37, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 12
-  direction: {x: 0, y: 0, z: 0}
 --- !u!114 &114820289229191420
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -127,7 +113,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 10
-  movement: {fileID: 114415259928146914}
 --- !u!135 &135549853623702256
 SphereCollider:
   m_ObjectHideFlags: 1
