@@ -19,11 +19,12 @@ namespace Carnapunk.SaintCarnage.ScriptableObjects
         public float FireRate;
         public float BulletSpeed;
 
-        public float ShotgunBulletsCount;
-        public float ShotgunSpread;
+        public int bulletCount;
+        public float spread;
 
         public new string name;
 
         public GameObject BulletPrefab;
+        public Patterns pattern;
     }
 }

@@ -7,15 +7,17 @@ namespace Carnapunk.SaintCarnage.Components
 {
     public class Gun : MonoBehaviour
     {
-        public float fireRate;
-
-        public GameObject bulletPrefab;
         public Transform shotOrigin;
+        public GunStats stats;
 
         [HideInInspector] public bool waitFireRate;
 
-        [SerializeField]
-        protected GunStats m_Weapon;
+        private IPattern pattern;
+
+        private void Awake() 
+        {
+            pattern = PatternFactory.Get(stats.pattern);
+        }
 
         private void Reset()
         {
@@ -37,45 +39,25 @@ namespace Carnapunk.SaintCarnage.Components
         {
             waitFireRate = true;
 
-            WeaponShoot();
+            SpawnBullets();
 
-            yield return new WaitForSeconds(m_Weapon.FireRate);
+            yield return new WaitForSeconds(stats.FireRate);
 
             waitFireRate = false;
         }
 
-
-        public void WeaponShoot()
+        private void SpawnBullets()
         {
-            switch (m_Weapon.Class)
+            Rigidbody[] bullets = new Rigidbody[stats.bulletCount];
+
+            for (int i = 0; i < stats.bulletCount; i++)
             {
-                case GunStats.WeaponClass.Shotgun: ShotgunShoot(); break;
-                case GunStats.WeaponClass.Pistol: PistolShoot(); break;
+                GameObject bullet = Instantiate(stats.BulletPrefab, shotOrigin.position, shotOrigin.rotation);
+                bullet.GetComponent<Projectile>().damage = stats.Damage;
+                bullets[i] = bullet.GetComponent<Rigidbody>();
             }
-        }
 
-        void ShotgunShoot()
-        {
-            for (int i = 0; i < m_Weapon.ShotgunBulletsCount; i++)
-            {
-                var BulletRot = shotOrigin.rotation;
-                BulletRot.y += Random.Range(-m_Weapon.ShotgunSpread, m_Weapon.ShotgunSpread);
-                GameObject GB = Instantiate(m_Weapon.BulletPrefab, shotOrigin.position, BulletRot);
-                GB.GetComponent<Rigidbody>().AddForce(GB.transform.forward * m_Weapon.BulletSpeed);
-            }
-        }
-
-        void PistolShoot()
-        {
-            GameObject GB = Instantiate(m_Weapon.BulletPrefab, shotOrigin.position, shotOrigin.rotation);
-            GB.GetComponent<Rigidbody>().AddForce(shotOrigin.forward * m_Weapon.BulletSpeed);
-        }
-        protected void SpawnBullet()
-        {
-            WeaponShoot();
-            //GameObject bullet = Instantiate(bulletPrefab, shotOrigin.position, Quaternion.identity);
-            //bullet.GetComponent<Projectile>().movement.direction = transform.forward;
-            //bullet.SetActive(true);
+            pattern.Apply(bullets, shotOrigin.position, stats.BulletSpeed, stats.spread);
         }
     }
 }

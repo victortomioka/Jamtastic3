@@ -3455,15 +3455,15 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1277381474661930}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.5, y: 1, z: 42.31221}
+  m_LocalRotation: {x: -0, y: -0.5587778, z: -0, w: 0.82931745}
+  m_LocalPosition: {x: -44.678238, y: 0, z: 1.7670391}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4515259444110094}
   - {fileID: 4383880331484532}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -67.943, z: 0}
 --- !u!4 &4547533549889662
 Transform:
   m_ObjectHideFlags: 1
@@ -4641,12 +4641,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7b893462dc9920c4098e958d2ca58015, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fireRate: 0
-  bulletPrefab: {fileID: 1980386461891036, guid: 069c6911a27c15640ac1c9284803c724,
-    type: 2}
   shotOrigin: {fileID: 4439592197405830}
+  stats: {fileID: 11400000, guid: bcdd489d66f0c674aa92d3e4faa087a1, type: 2}
   waitFireRate: 0
-  m_Weapon: {fileID: 11400000, guid: bcdd489d66f0c674aa92d3e4faa087a1, type: 2}
 --- !u!114 &114547861403300888
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -4658,6 +4655,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a78c487829e9d17428a7be57d769b2e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  clipsMeleeHit: []
   clipAttackMelee: {fileID: 8300000, guid: c716e9e26a7ab1e48912e7c52ed61e96, type: 3}
   clipShot: {fileID: 8300000, guid: 79c2afe9d940c674f9b04d033b9b7f26, type: 3}
   clipDie: {fileID: 8300000, guid: 935f0eac00834f34aa1e5ea859d0841a, type: 3}
