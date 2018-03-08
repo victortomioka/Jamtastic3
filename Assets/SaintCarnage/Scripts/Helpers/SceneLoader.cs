@@ -22,7 +22,7 @@ namespace Carnapunk.SaintCarnage.Helpers
         /// indicando o carregamento e, em seguida, carrega a cena especificada no outro parâmetro.
         /// Ao ser definada com o valor "false", a cena de destino é carregada diretamente (de forma síncrona).
         /// </param>
-        public static void Load(string sceneName, bool showLoadingScreen = true)
+        public static void Load(string sceneName, bool showLoadingScreen = true, bool additive = false)
         {
             if (showLoadingScreen)
             {
@@ -32,7 +32,7 @@ namespace Carnapunk.SaintCarnage.Helpers
             else
             {
                 NextScene = null;
-                SceneManager.LoadScene(sceneName);
+                SceneManager.LoadScene(sceneName, additive ? LoadSceneMode.Additive : LoadSceneMode.Single);
             }
         }
 
@@ -52,6 +52,11 @@ namespace Carnapunk.SaintCarnage.Helpers
             string sceneName = SceneManager.GetActiveScene().name;
 
             Load(sceneName, showLoadingScreen);
+        }
+
+        public static void CloseScene(string sceneName)
+        {
+            SceneManager.UnloadSceneAsync(sceneName);
         }
     }
 }
