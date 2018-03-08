@@ -18,11 +18,13 @@ namespace Carnapunk.SaintCarnage.Components
         public Image iconShotgun;
         public Sprite slotNormal;
         public Sprite slotSelected;
+        public Text textAmmo;
 
         [Header("Audio")]
         public AudioSource musicAudioSource;
         public AudioClip gameOverTheme;
 
+        private PlayerCharacter player;
         private PlayerController controller;
 
         public static bool IsPaused { get { return Time.timeScale == 0; } }
@@ -37,7 +39,8 @@ namespace Carnapunk.SaintCarnage.Components
 
             // DontDestroyOnLoad(gameObject);
 
-            controller = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerController>();
+            player = GameObject.FindGameObjectWithTag("Player").GetComponent<PlayerCharacter>();
+            controller = player.GetComponent<PlayerController>();
 
             GameObject ui = GameObject.Find("UI_InGame");
 
@@ -122,6 +125,17 @@ namespace Carnapunk.SaintCarnage.Components
                     primarySlot.sprite = slotNormal;
                     secondarySlot.sprite = slotSelected;
                 }
+            }
+
+            SetAmmoText();
+        }
+
+        public void SetAmmoText()
+        {
+            Gun selectedGun = controller.GetSelectedGun();
+            if(selectedGun != null)
+            {
+                textAmmo.text = selectedGun.Ammo.ToString();
             }
         }
 

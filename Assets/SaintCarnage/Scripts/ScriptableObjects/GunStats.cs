@@ -22,6 +22,9 @@ namespace Carnapunk.SaintCarnage.ScriptableObjects
         public int bulletCount;
         public float spread;
 
+        public int maxAmmo;
+        public bool unlimitedAmmo;
+
         public new string name;
 
         public GameObject BulletPrefab;

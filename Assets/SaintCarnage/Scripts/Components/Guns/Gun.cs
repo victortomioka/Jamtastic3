@@ -12,11 +12,15 @@ namespace Carnapunk.SaintCarnage.Components
 
         [HideInInspector] public bool waitFireRate;
 
+        public int Ammo { get; set; }
+
         private IPattern pattern;
 
-        private void Awake() 
+        private void Start() 
         {
             pattern = PatternFactory.Get(stats.pattern);
+
+            Ammo = stats.maxAmmo;
         }
 
         private void Reset()
@@ -31,13 +35,19 @@ namespace Carnapunk.SaintCarnage.Components
 
         public void Shoot()
         {
-            if (!waitFireRate)
+            if (waitFireRate)
+                return;
+
+            if(stats.unlimitedAmmo || Ammo > 0)
                 StartCoroutine("ShootCoroutine");
         }
 
         protected IEnumerator ShootCoroutine()
         {
             waitFireRate = true;
+
+            if(!stats.unlimitedAmmo)
+                Ammo--;
 
             SpawnBullets();
 

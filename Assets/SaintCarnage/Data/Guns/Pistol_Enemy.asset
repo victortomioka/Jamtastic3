@@ -9,18 +9,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 556946706a53a6e4d8266782f23160f3, type: 3}
-  m_Name: PlayerPistol
+  m_Name: Pistol_Enemy
   m_EditorClassIdentifier: 
   Class: 1
   Category: 1
-  Damage: 10
+  Damage: 5
   FireRate: 0.5
-  BulletSpeed: 700
-  ShotgunBulletsCount: 1
+  BulletSpeed: 250
   bulletCount: 1
-  ShotgunSpread: 0
   spread: 0
+  maxAmmo: 0
+  unlimitedAmmo: 1
   name: Pistol
-  BulletPrefab: {fileID: 1980386461891036, guid: db2f6ae9de91f1947a7f95a0bbc44c9a,
+  BulletPrefab: {fileID: 1980386461891036, guid: 069c6911a27c15640ac1c9284803c724,
     type: 2}
   pattern: 0

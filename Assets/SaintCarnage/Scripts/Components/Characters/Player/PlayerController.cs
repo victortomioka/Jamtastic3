@@ -178,6 +178,16 @@ namespace Carnapunk.SaintCarnage.Components
             GameManager.Instance.SetWeaponsUI(category, primaryWeaponAvailable, secondaryWeaponAvailable);
         }
 
+        public Gun GetSelectedGun()
+        {
+            if(selectedWeapon == GunStats.WeaponCategory.PrimaryWeapon)
+                return primaryWeapon.gun;
+            else if(selectedWeapon == GunStats.WeaponCategory.SecondaryWeapon)
+                return secondaryWeapon.gun;
+            else
+                return null;
+        }
+
         private void SetShootAnim()
         {
             switch (selectedWeapon)
@@ -219,6 +229,8 @@ namespace Carnapunk.SaintCarnage.Components
                     sfx.Play(sfx.clipShotShotgun);
                     break;
             }
+
+            GameManager.Instance.SetAmmoText();
         }
 
         public void SetWeaponAvailable(GunStats.WeaponCategory category)
