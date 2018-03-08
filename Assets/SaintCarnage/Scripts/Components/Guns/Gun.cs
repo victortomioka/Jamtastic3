@@ -16,7 +16,7 @@ namespace Carnapunk.SaintCarnage.Components
 
         private IPattern pattern;
 
-        private void Start() 
+        protected virtual void Start() 
         {
             pattern = PatternFactory.Get(stats.pattern);
 

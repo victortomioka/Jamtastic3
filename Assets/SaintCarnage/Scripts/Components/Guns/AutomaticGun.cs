@@ -8,6 +8,8 @@ namespace Carnapunk.SaintCarnage.Components
     {
         private void Start()
         {
+            base.Start();
+
             InvokeRepeating("SpawnBullets", 0, stats.FireRate);
         }
     }

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: dca422df0210db7489a7b5750219dcb9
+guid: d3b0a212faa4cd6489bbf3c1c1c03c6f
 ModelImporter:
   serializedVersion: 22
   fileIDToRecycleName:
@@ -67,93 +67,93 @@ ModelImporter:
     100122: enemy_Melee_REFERENCE:nineteeneleven_trigger
     100124: enemy_Melee_REFERENCE:peacock_plume_MESH
     100126: enemy_Melee_REFERENCE:peacock_plume_MESH1
-    100128: enemy_Melee_REFERENCE:pinky_l_1
-    100130: enemy_Melee_REFERENCE:pinky_l_2
-    100132: enemy_Melee_REFERENCE:pinky_l_3
-    100134: enemy_Melee_REFERENCE:pinky_l_4
-    100136: enemy_Melee_REFERENCE:pinky_r_1
-    100138: enemy_Melee_REFERENCE:pinky_r_2
-    100140: enemy_Melee_REFERENCE:pinky_r_3
-    100142: enemy_Melee_REFERENCE:pinky_r_4
-    100144: enemy_Melee_REFERENCE:plume_1
-    100146: enemy_Melee_REFERENCE:plume_1_1
-    100148: enemy_Melee_REFERENCE:plume_1_10
-    100150: enemy_Melee_REFERENCE:plume_1_11
-    100152: enemy_Melee_REFERENCE:plume_1_12
-    100154: enemy_Melee_REFERENCE:plume_1_13
-    100156: enemy_Melee_REFERENCE:plume_1_14
-    100158: enemy_Melee_REFERENCE:plume_1_15
-    100160: enemy_Melee_REFERENCE:plume_1_16
-    100162: enemy_Melee_REFERENCE:plume_1_17
-    100164: enemy_Melee_REFERENCE:plume_1_18
-    100166: enemy_Melee_REFERENCE:plume_1_2
-    100168: enemy_Melee_REFERENCE:plume_1_3
-    100170: enemy_Melee_REFERENCE:plume_1_4
-    100172: enemy_Melee_REFERENCE:plume_1_5
-    100174: enemy_Melee_REFERENCE:plume_1_6
-    100176: enemy_Melee_REFERENCE:plume_1_7
-    100178: enemy_Melee_REFERENCE:plume_1_8
-    100180: enemy_Melee_REFERENCE:plume_1_9
-    100182: enemy_Melee_REFERENCE:plume_2
-    100184: enemy_Melee_REFERENCE:plume_2_1
-    100186: enemy_Melee_REFERENCE:plume_2_10
-    100188: enemy_Melee_REFERENCE:plume_2_11
-    100190: enemy_Melee_REFERENCE:plume_2_12
-    100192: enemy_Melee_REFERENCE:plume_2_13
-    100194: enemy_Melee_REFERENCE:plume_2_14
-    100196: enemy_Melee_REFERENCE:plume_2_15
-    100198: enemy_Melee_REFERENCE:plume_2_16
-    100200: enemy_Melee_REFERENCE:plume_2_17
-    100202: enemy_Melee_REFERENCE:plume_2_18
-    100204: enemy_Melee_REFERENCE:plume_2_2
-    100206: enemy_Melee_REFERENCE:plume_2_3
-    100208: enemy_Melee_REFERENCE:plume_2_4
-    100210: enemy_Melee_REFERENCE:plume_2_5
-    100212: enemy_Melee_REFERENCE:plume_2_6
-    100214: enemy_Melee_REFERENCE:plume_2_7
-    100216: enemy_Melee_REFERENCE:plume_2_8
-    100218: enemy_Melee_REFERENCE:plume_2_9
-    100220: enemy_Melee_REFERENCE:plume_3
-    100222: enemy_Melee_REFERENCE:root
-    100224: enemy_Melee_REFERENCE:shoulder_l_1
-    100226: enemy_Melee_REFERENCE:shoulder_r_1
-    100228: enemy_Melee_REFERENCE:shoulderGuard_MESH
-    100230: enemy_Melee_REFERENCE:SKEL
-    100232: enemy_Melee_REFERENCE:SKELETON
-    100234: enemy_Melee_REFERENCE:skin_MESH
-    100236: enemy_Melee_REFERENCE:slide_MESH
-    100238: enemy_Melee_REFERENCE:spine1
-    100240: enemy_Melee_REFERENCE:spine2
-    100242: enemy_Melee_REFERENCE:spine3
-    100244: enemy_Melee_REFERENCE:teeth_MESH1
-    100246: enemy_Melee_REFERENCE:teeth_MESH2
-    100248: enemy_Melee_REFERENCE:teeth_MESH3
-    100250: enemy_Melee_REFERENCE:teeth_MESH4
-    100252: enemy_Melee_REFERENCE:teeth_MESH5
-    100254: enemy_Melee_REFERENCE:thumb_l_1
-    100256: enemy_Melee_REFERENCE:thumb_l_2
-    100258: enemy_Melee_REFERENCE:thumb_l_3
-    100260: enemy_Melee_REFERENCE:thumb_r_1
-    100262: enemy_Melee_REFERENCE:thumb_r_2
-    100264: enemy_Melee_REFERENCE:thumb_r_3
-    100266: enemy_Melee_REFERENCE:toe_l_1_1
-    100268: enemy_Melee_REFERENCE:toe_l_1_2
-    100270: enemy_Melee_REFERENCE:toe_l_2_1
-    100272: enemy_Melee_REFERENCE:toe_l_2_2
-    100274: enemy_Melee_REFERENCE:toe_l_3_1
-    100276: enemy_Melee_REFERENCE:toe_l_3_2
-    100278: enemy_Melee_REFERENCE:toe_r_1_1
-    100280: enemy_Melee_REFERENCE:toe_r_1_2
-    100282: enemy_Melee_REFERENCE:toe_r_2_1
-    100284: enemy_Melee_REFERENCE:toe_r_2_2
-    100286: enemy_Melee_REFERENCE:toe_r_3_1
-    100288: enemy_Melee_REFERENCE:toe_r_3_2
-    100290: enemy_Melee_REFERENCE:trigger_MESH
-    100292: enemy_Melee_REFERENCE:upper_jaw1
-    100294: enemy_Melee_REFERENCE:wrist_l_1
-    100296: enemy_Melee_REFERENCE:wrist_r_1
-    100298: //RootNode
-    100300: pPlane1
+    100128: enemy_Melee_REFERENCE:peacock_plume_MESH3
+    100130: enemy_Melee_REFERENCE:pinky_l_1
+    100132: enemy_Melee_REFERENCE:pinky_l_2
+    100134: enemy_Melee_REFERENCE:pinky_l_3
+    100136: enemy_Melee_REFERENCE:pinky_l_4
+    100138: enemy_Melee_REFERENCE:pinky_r_1
+    100140: enemy_Melee_REFERENCE:pinky_r_2
+    100142: enemy_Melee_REFERENCE:pinky_r_3
+    100144: enemy_Melee_REFERENCE:pinky_r_4
+    100146: enemy_Melee_REFERENCE:plume_1
+    100148: enemy_Melee_REFERENCE:plume_1_1
+    100150: enemy_Melee_REFERENCE:plume_1_10
+    100152: enemy_Melee_REFERENCE:plume_1_11
+    100154: enemy_Melee_REFERENCE:plume_1_12
+    100156: enemy_Melee_REFERENCE:plume_1_13
+    100158: enemy_Melee_REFERENCE:plume_1_14
+    100160: enemy_Melee_REFERENCE:plume_1_15
+    100162: enemy_Melee_REFERENCE:plume_1_16
+    100164: enemy_Melee_REFERENCE:plume_1_17
+    100166: enemy_Melee_REFERENCE:plume_1_18
+    100168: enemy_Melee_REFERENCE:plume_1_2
+    100170: enemy_Melee_REFERENCE:plume_1_3
+    100172: enemy_Melee_REFERENCE:plume_1_4
+    100174: enemy_Melee_REFERENCE:plume_1_5
+    100176: enemy_Melee_REFERENCE:plume_1_6
+    100178: enemy_Melee_REFERENCE:plume_1_7
+    100180: enemy_Melee_REFERENCE:plume_1_8
+    100182: enemy_Melee_REFERENCE:plume_1_9
+    100184: enemy_Melee_REFERENCE:plume_2
+    100186: enemy_Melee_REFERENCE:plume_2_1
+    100188: enemy_Melee_REFERENCE:plume_2_10
+    100190: enemy_Melee_REFERENCE:plume_2_11
+    100192: enemy_Melee_REFERENCE:plume_2_12
+    100194: enemy_Melee_REFERENCE:plume_2_13
+    100196: enemy_Melee_REFERENCE:plume_2_14
+    100198: enemy_Melee_REFERENCE:plume_2_15
+    100200: enemy_Melee_REFERENCE:plume_2_16
+    100202: enemy_Melee_REFERENCE:plume_2_17
+    100204: enemy_Melee_REFERENCE:plume_2_18
+    100206: enemy_Melee_REFERENCE:plume_2_2
+    100208: enemy_Melee_REFERENCE:plume_2_3
+    100210: enemy_Melee_REFERENCE:plume_2_4
+    100212: enemy_Melee_REFERENCE:plume_2_5
+    100214: enemy_Melee_REFERENCE:plume_2_6
+    100216: enemy_Melee_REFERENCE:plume_2_7
+    100218: enemy_Melee_REFERENCE:plume_2_8
+    100220: enemy_Melee_REFERENCE:plume_2_9
+    100222: enemy_Melee_REFERENCE:plume_3
+    100224: enemy_Melee_REFERENCE:root
+    100226: enemy_Melee_REFERENCE:shoulder_l_1
+    100228: enemy_Melee_REFERENCE:shoulder_r_1
+    100230: enemy_Melee_REFERENCE:shoulderGuard_MESH
+    100232: enemy_Melee_REFERENCE:SKEL
+    100234: enemy_Melee_REFERENCE:SKELETON
+    100236: enemy_Melee_REFERENCE:skin_MESH
+    100238: enemy_Melee_REFERENCE:slide_MESH
+    100240: enemy_Melee_REFERENCE:spine1
+    100242: enemy_Melee_REFERENCE:spine2
+    100244: enemy_Melee_REFERENCE:spine3
+    100246: enemy_Melee_REFERENCE:teeth_MESH1
+    100248: enemy_Melee_REFERENCE:teeth_MESH2
+    100250: enemy_Melee_REFERENCE:teeth_MESH3
+    100252: enemy_Melee_REFERENCE:teeth_MESH4
+    100254: enemy_Melee_REFERENCE:teeth_MESH5
+    100256: enemy_Melee_REFERENCE:thumb_l_1
+    100258: enemy_Melee_REFERENCE:thumb_l_2
+    100260: enemy_Melee_REFERENCE:thumb_l_3
+    100262: enemy_Melee_REFERENCE:thumb_r_1
+    100264: enemy_Melee_REFERENCE:thumb_r_2
+    100266: enemy_Melee_REFERENCE:thumb_r_3
+    100268: enemy_Melee_REFERENCE:toe_l_1_1
+    100270: enemy_Melee_REFERENCE:toe_l_1_2
+    100272: enemy_Melee_REFERENCE:toe_l_2_1
+    100274: enemy_Melee_REFERENCE:toe_l_2_2
+    100276: enemy_Melee_REFERENCE:toe_l_3_1
+    100278: enemy_Melee_REFERENCE:toe_l_3_2
+    100280: enemy_Melee_REFERENCE:toe_r_1_1
+    100282: enemy_Melee_REFERENCE:toe_r_1_2
+    100284: enemy_Melee_REFERENCE:toe_r_2_1
+    100286: enemy_Melee_REFERENCE:toe_r_2_2
+    100288: enemy_Melee_REFERENCE:toe_r_3_1
+    100290: enemy_Melee_REFERENCE:toe_r_3_2
+    100292: enemy_Melee_REFERENCE:trigger_MESH
+    100294: enemy_Melee_REFERENCE:upper_jaw1
+    100296: enemy_Melee_REFERENCE:wrist_l_1
+    100298: enemy_Melee_REFERENCE:wrist_r_1
+    100300: //RootNode
     400000: enemy_Melee_REFERENCE:ankle_l
     400002: enemy_Melee_REFERENCE:ankle_r
     400004: enemy_Melee_REFERENCE:body_MESH1
@@ -218,122 +218,120 @@ ModelImporter:
     400122: enemy_Melee_REFERENCE:nineteeneleven_trigger
     400124: enemy_Melee_REFERENCE:peacock_plume_MESH
     400126: enemy_Melee_REFERENCE:peacock_plume_MESH1
-    400128: enemy_Melee_REFERENCE:pinky_l_1
-    400130: enemy_Melee_REFERENCE:pinky_l_2
-    400132: enemy_Melee_REFERENCE:pinky_l_3
-    400134: enemy_Melee_REFERENCE:pinky_l_4
-    400136: enemy_Melee_REFERENCE:pinky_r_1
-    400138: enemy_Melee_REFERENCE:pinky_r_2
-    400140: enemy_Melee_REFERENCE:pinky_r_3
-    400142: enemy_Melee_REFERENCE:pinky_r_4
-    400144: enemy_Melee_REFERENCE:plume_1
-    400146: enemy_Melee_REFERENCE:plume_1_1
-    400148: enemy_Melee_REFERENCE:plume_1_10
-    400150: enemy_Melee_REFERENCE:plume_1_11
-    400152: enemy_Melee_REFERENCE:plume_1_12
-    400154: enemy_Melee_REFERENCE:plume_1_13
-    400156: enemy_Melee_REFERENCE:plume_1_14
-    400158: enemy_Melee_REFERENCE:plume_1_15
-    400160: enemy_Melee_REFERENCE:plume_1_16
-    400162: enemy_Melee_REFERENCE:plume_1_17
-    400164: enemy_Melee_REFERENCE:plume_1_18
-    400166: enemy_Melee_REFERENCE:plume_1_2
-    400168: enemy_Melee_REFERENCE:plume_1_3
-    400170: enemy_Melee_REFERENCE:plume_1_4
-    400172: enemy_Melee_REFERENCE:plume_1_5
-    400174: enemy_Melee_REFERENCE:plume_1_6
-    400176: enemy_Melee_REFERENCE:plume_1_7
-    400178: enemy_Melee_REFERENCE:plume_1_8
-    400180: enemy_Melee_REFERENCE:plume_1_9
-    400182: enemy_Melee_REFERENCE:plume_2
-    400184: enemy_Melee_REFERENCE:plume_2_1
-    400186: enemy_Melee_REFERENCE:plume_2_10
-    400188: enemy_Melee_REFERENCE:plume_2_11
-    400190: enemy_Melee_REFERENCE:plume_2_12
-    400192: enemy_Melee_REFERENCE:plume_2_13
-    400194: enemy_Melee_REFERENCE:plume_2_14
-    400196: enemy_Melee_REFERENCE:plume_2_15
-    400198: enemy_Melee_REFERENCE:plume_2_16
-    400200: enemy_Melee_REFERENCE:plume_2_17
-    400202: enemy_Melee_REFERENCE:plume_2_18
-    400204: enemy_Melee_REFERENCE:plume_2_2
-    400206: enemy_Melee_REFERENCE:plume_2_3
-    400208: enemy_Melee_REFERENCE:plume_2_4
-    400210: enemy_Melee_REFERENCE:plume_2_5
-    400212: enemy_Melee_REFERENCE:plume_2_6
-    400214: enemy_Melee_REFERENCE:plume_2_7
-    400216: enemy_Melee_REFERENCE:plume_2_8
-    400218: enemy_Melee_REFERENCE:plume_2_9
-    400220: enemy_Melee_REFERENCE:plume_3
-    400222: enemy_Melee_REFERENCE:root
-    400224: enemy_Melee_REFERENCE:shoulder_l_1
-    400226: enemy_Melee_REFERENCE:shoulder_r_1
-    400228: enemy_Melee_REFERENCE:shoulderGuard_MESH
-    400230: enemy_Melee_REFERENCE:SKEL
-    400232: enemy_Melee_REFERENCE:SKELETON
-    400234: enemy_Melee_REFERENCE:skin_MESH
-    400236: enemy_Melee_REFERENCE:slide_MESH
-    400238: enemy_Melee_REFERENCE:spine1
-    400240: enemy_Melee_REFERENCE:spine2
-    400242: enemy_Melee_REFERENCE:spine3
-    400244: enemy_Melee_REFERENCE:teeth_MESH1
-    400246: enemy_Melee_REFERENCE:teeth_MESH2
-    400248: enemy_Melee_REFERENCE:teeth_MESH3
-    400250: enemy_Melee_REFERENCE:teeth_MESH4
-    400252: enemy_Melee_REFERENCE:teeth_MESH5
-    400254: enemy_Melee_REFERENCE:thumb_l_1
-    400256: enemy_Melee_REFERENCE:thumb_l_2
-    400258: enemy_Melee_REFERENCE:thumb_l_3
-    400260: enemy_Melee_REFERENCE:thumb_r_1
-    400262: enemy_Melee_REFERENCE:thumb_r_2
-    400264: enemy_Melee_REFERENCE:thumb_r_3
-    400266: enemy_Melee_REFERENCE:toe_l_1_1
-    400268: enemy_Melee_REFERENCE:toe_l_1_2
-    400270: enemy_Melee_REFERENCE:toe_l_2_1
-    400272: enemy_Melee_REFERENCE:toe_l_2_2
-    400274: enemy_Melee_REFERENCE:toe_l_3_1
-    400276: enemy_Melee_REFERENCE:toe_l_3_2
-    400278: enemy_Melee_REFERENCE:toe_r_1_1
-    400280: enemy_Melee_REFERENCE:toe_r_1_2
-    400282: enemy_Melee_REFERENCE:toe_r_2_1
-    400284: enemy_Melee_REFERENCE:toe_r_2_2
-    400286: enemy_Melee_REFERENCE:toe_r_3_1
-    400288: enemy_Melee_REFERENCE:toe_r_3_2
-    400290: enemy_Melee_REFERENCE:trigger_MESH
-    400292: enemy_Melee_REFERENCE:upper_jaw1
-    400294: enemy_Melee_REFERENCE:wrist_l_1
-    400296: enemy_Melee_REFERENCE:wrist_r_1
-    400298: //RootNode
-    400300: pPlane1
-    2100000: lambert1
-    2100002: enemy_Melee_REFERENCE_lambert4
+    400128: enemy_Melee_REFERENCE:peacock_plume_MESH3
+    400130: enemy_Melee_REFERENCE:pinky_l_1
+    400132: enemy_Melee_REFERENCE:pinky_l_2
+    400134: enemy_Melee_REFERENCE:pinky_l_3
+    400136: enemy_Melee_REFERENCE:pinky_l_4
+    400138: enemy_Melee_REFERENCE:pinky_r_1
+    400140: enemy_Melee_REFERENCE:pinky_r_2
+    400142: enemy_Melee_REFERENCE:pinky_r_3
+    400144: enemy_Melee_REFERENCE:pinky_r_4
+    400146: enemy_Melee_REFERENCE:plume_1
+    400148: enemy_Melee_REFERENCE:plume_1_1
+    400150: enemy_Melee_REFERENCE:plume_1_10
+    400152: enemy_Melee_REFERENCE:plume_1_11
+    400154: enemy_Melee_REFERENCE:plume_1_12
+    400156: enemy_Melee_REFERENCE:plume_1_13
+    400158: enemy_Melee_REFERENCE:plume_1_14
+    400160: enemy_Melee_REFERENCE:plume_1_15
+    400162: enemy_Melee_REFERENCE:plume_1_16
+    400164: enemy_Melee_REFERENCE:plume_1_17
+    400166: enemy_Melee_REFERENCE:plume_1_18
+    400168: enemy_Melee_REFERENCE:plume_1_2
+    400170: enemy_Melee_REFERENCE:plume_1_3
+    400172: enemy_Melee_REFERENCE:plume_1_4
+    400174: enemy_Melee_REFERENCE:plume_1_5
+    400176: enemy_Melee_REFERENCE:plume_1_6
+    400178: enemy_Melee_REFERENCE:plume_1_7
+    400180: enemy_Melee_REFERENCE:plume_1_8
+    400182: enemy_Melee_REFERENCE:plume_1_9
+    400184: enemy_Melee_REFERENCE:plume_2
+    400186: enemy_Melee_REFERENCE:plume_2_1
+    400188: enemy_Melee_REFERENCE:plume_2_10
+    400190: enemy_Melee_REFERENCE:plume_2_11
+    400192: enemy_Melee_REFERENCE:plume_2_12
+    400194: enemy_Melee_REFERENCE:plume_2_13
+    400196: enemy_Melee_REFERENCE:plume_2_14
+    400198: enemy_Melee_REFERENCE:plume_2_15
+    400200: enemy_Melee_REFERENCE:plume_2_16
+    400202: enemy_Melee_REFERENCE:plume_2_17
+    400204: enemy_Melee_REFERENCE:plume_2_18
+    400206: enemy_Melee_REFERENCE:plume_2_2
+    400208: enemy_Melee_REFERENCE:plume_2_3
+    400210: enemy_Melee_REFERENCE:plume_2_4
+    400212: enemy_Melee_REFERENCE:plume_2_5
+    400214: enemy_Melee_REFERENCE:plume_2_6
+    400216: enemy_Melee_REFERENCE:plume_2_7
+    400218: enemy_Melee_REFERENCE:plume_2_8
+    400220: enemy_Melee_REFERENCE:plume_2_9
+    400222: enemy_Melee_REFERENCE:plume_3
+    400224: enemy_Melee_REFERENCE:root
+    400226: enemy_Melee_REFERENCE:shoulder_l_1
+    400228: enemy_Melee_REFERENCE:shoulder_r_1
+    400230: enemy_Melee_REFERENCE:shoulderGuard_MESH
+    400232: enemy_Melee_REFERENCE:SKEL
+    400234: enemy_Melee_REFERENCE:SKELETON
+    400236: enemy_Melee_REFERENCE:skin_MESH
+    400238: enemy_Melee_REFERENCE:slide_MESH
+    400240: enemy_Melee_REFERENCE:spine1
+    400242: enemy_Melee_REFERENCE:spine2
+    400244: enemy_Melee_REFERENCE:spine3
+    400246: enemy_Melee_REFERENCE:teeth_MESH1
+    400248: enemy_Melee_REFERENCE:teeth_MESH2
+    400250: enemy_Melee_REFERENCE:teeth_MESH3
+    400252: enemy_Melee_REFERENCE:teeth_MESH4
+    400254: enemy_Melee_REFERENCE:teeth_MESH5
+    400256: enemy_Melee_REFERENCE:thumb_l_1
+    400258: enemy_Melee_REFERENCE:thumb_l_2
+    400260: enemy_Melee_REFERENCE:thumb_l_3
+    400262: enemy_Melee_REFERENCE:thumb_r_1
+    400264: enemy_Melee_REFERENCE:thumb_r_2
+    400266: enemy_Melee_REFERENCE:thumb_r_3
+    400268: enemy_Melee_REFERENCE:toe_l_1_1
+    400270: enemy_Melee_REFERENCE:toe_l_1_2
+    400272: enemy_Melee_REFERENCE:toe_l_2_1
+    400274: enemy_Melee_REFERENCE:toe_l_2_2
+    400276: enemy_Melee_REFERENCE:toe_l_3_1
+    400278: enemy_Melee_REFERENCE:toe_l_3_2
+    400280: enemy_Melee_REFERENCE:toe_r_1_1
+    400282: enemy_Melee_REFERENCE:toe_r_1_2
+    400284: enemy_Melee_REFERENCE:toe_r_2_1
+    400286: enemy_Melee_REFERENCE:toe_r_2_2
+    400288: enemy_Melee_REFERENCE:toe_r_3_1
+    400290: enemy_Melee_REFERENCE:toe_r_3_2
+    400292: enemy_Melee_REFERENCE:trigger_MESH
+    400294: enemy_Melee_REFERENCE:upper_jaw1
+    400296: enemy_Melee_REFERENCE:wrist_l_1
+    400298: enemy_Melee_REFERENCE:wrist_r_1
+    400300: //RootNode
+    2100000: enemy_Melee_REFERENCE_lambert4
+    2100002: lambert3
     2100004: enemy_Melee_REFERENCE_lambert2
     2100006: enemy_Melee_REFERENCE_lambert5
-    2300000: pPlane1
-    3300000: pPlane1
-    4300000: pPlane1
-    4300002: enemy_Melee_REFERENCE:peacock_plume_MESH
-    4300004: enemy_Melee_REFERENCE:peacock_plume_MESH1
-    4300006: enemy_Melee_REFERENCE:shoulderGuard_MESH
-    4300008: enemy_Melee_REFERENCE:kneepads_MESH
-    4300010: enemy_Melee_REFERENCE:mask_MESH
-    4300012: enemy_Melee_REFERENCE:teeth_MESH1
-    4300014: enemy_Melee_REFERENCE:teeth_MESH2
-    4300016: enemy_Melee_REFERENCE:teeth_MESH3
-    4300018: enemy_Melee_REFERENCE:teeth_MESH4
-    4300020: enemy_Melee_REFERENCE:teeth_MESH5
-    4300022: enemy_Melee_REFERENCE:cuirass_MESH
-    4300024: enemy_Melee_REFERENCE:skin_MESH
+    4300000: enemy_Melee_REFERENCE:peacock_plume_MESH
+    4300002: enemy_Melee_REFERENCE:peacock_plume_MESH1
+    4300004: enemy_Melee_REFERENCE:shoulderGuard_MESH
+    4300006: enemy_Melee_REFERENCE:kneepads_MESH
+    4300008: enemy_Melee_REFERENCE:mask_MESH
+    4300010: enemy_Melee_REFERENCE:teeth_MESH1
+    4300012: enemy_Melee_REFERENCE:teeth_MESH2
+    4300014: enemy_Melee_REFERENCE:teeth_MESH3
+    4300016: enemy_Melee_REFERENCE:teeth_MESH4
+    4300018: enemy_Melee_REFERENCE:teeth_MESH5
+    4300020: enemy_Melee_REFERENCE:cuirass_MESH
+    4300022: enemy_Melee_REFERENCE:skin_MESH
+    4300024: enemy_Melee_REFERENCE:peacock_plume_MESH3
     4300026: enemy_Melee_REFERENCE:frame_MESH
     4300028: enemy_Melee_REFERENCE:muzzle_MESH
     4300030: enemy_Melee_REFERENCE:hammer_MESH
     4300032: enemy_Melee_REFERENCE:trigger_MESH
     4300034: enemy_Melee_REFERENCE:slide_MESH
-    7400000: enemyPistol|idle
-    7400002: enemyPistol|walk
-    7400004: enemyPistol|takeDamage
-    7400006: enemyPistol|death
-    7400008: enemyPistol|shoot
+    7400000: enemyPistol_idle
+    7400002: enemyPistol_walk
+    7400004: enemyPistol_takeDamage
+    7400006: enemyPistol_death
+    7400008: enemyPistol_shoot
     9500000: //RootNode
     13700000: enemy_Melee_REFERENCE:cuirass_MESH
     13700002: enemy_Melee_REFERENCE:frame_MESH
@@ -343,15 +341,16 @@ ModelImporter:
     13700010: enemy_Melee_REFERENCE:muzzle_MESH
     13700012: enemy_Melee_REFERENCE:peacock_plume_MESH
     13700014: enemy_Melee_REFERENCE:peacock_plume_MESH1
-    13700016: enemy_Melee_REFERENCE:shoulderGuard_MESH
-    13700018: enemy_Melee_REFERENCE:skin_MESH
-    13700020: enemy_Melee_REFERENCE:slide_MESH
-    13700022: enemy_Melee_REFERENCE:teeth_MESH1
-    13700024: enemy_Melee_REFERENCE:teeth_MESH2
-    13700026: enemy_Melee_REFERENCE:teeth_MESH3
-    13700028: enemy_Melee_REFERENCE:teeth_MESH4
-    13700030: enemy_Melee_REFERENCE:teeth_MESH5
-    13700032: enemy_Melee_REFERENCE:trigger_MESH
+    13700016: enemy_Melee_REFERENCE:peacock_plume_MESH3
+    13700018: enemy_Melee_REFERENCE:shoulderGuard_MESH
+    13700020: enemy_Melee_REFERENCE:skin_MESH
+    13700022: enemy_Melee_REFERENCE:slide_MESH
+    13700024: enemy_Melee_REFERENCE:teeth_MESH1
+    13700026: enemy_Melee_REFERENCE:teeth_MESH2
+    13700028: enemy_Melee_REFERENCE:teeth_MESH3
+    13700030: enemy_Melee_REFERENCE:teeth_MESH4
+    13700032: enemy_Melee_REFERENCE:teeth_MESH5
+    13700034: enemy_Melee_REFERENCE:trigger_MESH
   externalObjects: {}
   materials:
     importMaterials: 1
@@ -381,8 +380,8 @@ ModelImporter:
     extraUserProperties: []
     clipAnimations:
     - serializedVersion: 16
-      name: enemyPistol|idle
-      takeName: idle
+      name: enemyPistol_idle
+      takeName: Take 001
       firstFrame: 1
       lastFrame: 80
       wrapMode: 0
@@ -391,7 +390,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -409,8 +408,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: enemyPistol|walk
-      takeName: walk
+      name: enemyPistol_walk
+      takeName: Take 001
       firstFrame: 81
       lastFrame: 99
       wrapMode: 0
@@ -419,7 +418,7 @@ ModelImporter:
       cycleOffset: 0
       loop: 0
       hasAdditiveReferencePose: 0
-      loopTime: 0
+      loopTime: 1
       loopBlend: 0
       loopBlendOrientation: 0
       loopBlendPositionY: 0
@@ -437,8 +436,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: enemyPistol|takeDamage
-      takeName: takeDamage
+      name: enemyPistol_takeDamage
+      takeName: Take 001
       firstFrame: 146
       lastFrame: 158
       wrapMode: 0
@@ -470,10 +469,10 @@ ModelImporter:
       transformMask: []
       maskType: 3
       maskSource: {instanceID: 0}
-      additiveReferencePoseFrame: 0
+      additiveReferencePoseFrame: 1
     - serializedVersion: 16
-      name: enemyPistol|death
-      takeName: death
+      name: enemyPistol_death
+      takeName: Take 001
       firstFrame: 159
       lastFrame: 175
       wrapMode: 0
@@ -500,8 +499,8 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: enemyPistol|shoot
-      takeName: shoot
+      name: enemyPistol_shoot
+      takeName: Take 001
       firstFrame: 176
       lastFrame: 196
       wrapMode: 0
@@ -523,7 +522,7 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.41618493
+      - time: 0.39005637
         functionName: SendUpwards
         data: Shoot
         objectReferenceParameter: {instanceID: 0}
