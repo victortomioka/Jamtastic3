@@ -16,11 +16,15 @@ namespace Carnapunk.SaintCarnage.Components
 
         private IPattern pattern;
 
-        protected virtual void Start() 
-        {
+        protected virtual void Awake() {
             pattern = PatternFactory.Get(stats.pattern);
 
             Ammo = stats.maxAmmo;
+        }
+
+        protected virtual void Start() 
+        {
+            
         }
 
         private void Reset()

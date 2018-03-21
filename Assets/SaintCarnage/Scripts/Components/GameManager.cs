@@ -12,13 +12,18 @@ namespace Carnapunk.SaintCarnage.Components
         public GameObject panelPause;
         public GameObject panelGameOver;
 
+        public Image[] gunSlots;
+        public Image[] gunIcons;
+
+        public Text textAmmo;
+
         public Image primarySlot;
         public Image secondarySlot;
         public Image iconPistol;
         public Image iconShotgun;
         public Sprite slotNormal;
         public Sprite slotSelected;
-        public Text textAmmo;
+
 
         [Header("Audio")]
         public AudioSource musicAudioSource;
@@ -54,6 +59,16 @@ namespace Carnapunk.SaintCarnage.Components
         private void Start()
         {
             HideCursor();
+            SetGunUI();
+        }
+
+        private void OnEnable() 
+        {
+            controller.guns.OnSelectedGun += OnSelectedGun;
+        }
+        private void OnDisable() 
+        {
+            controller.guns.OnSelectedGun -= OnSelectedGun;
         }
 
         public void Pause()
@@ -100,6 +115,56 @@ namespace Carnapunk.SaintCarnage.Components
             }
         }
 
+        private void SetGunUI()
+        {
+            for (int i = 0; i < gunSlots.Length; i++)
+            {
+                Image uiSlot = gunSlots[i];
+                GunSlot slot = controller.guns.slots[i];
+
+                SetGunSlotIcon(i, slot);
+
+                if (!slot.IsEmpty)
+                {
+                    if (i == controller.guns.selectedSlot)
+                        uiSlot.sprite = slotSelected;
+                    else
+                        uiSlot.sprite = slotNormal;
+                }
+            }
+
+            SetAmmoText(controller.guns.SelectedGun);
+        }
+
+        private void OnSelectedGun(int slotIndex, Gun selectedGun)
+        {
+            if(selectedGun == null)
+                return;
+                
+            for (int i = 0; i < gunSlots.Length; i++)
+            {
+                if(i == slotIndex)
+                    gunSlots[i].sprite = slotSelected;
+                else
+                    gunSlots[i].sprite = slotNormal;
+            }
+
+            SetAmmoText(controller.guns.SelectedGun);
+        }
+
+        public void SetGunSlotIcon(int index, GunSlot slot)
+        {
+            if (slot.IsEmpty)
+            {
+                gunIcons[index].gameObject.SetActive(false);
+            }
+            else
+            {
+                gunIcons[index].gameObject.SetActive(true);
+                gunIcons[index].sprite = slot.gun.stats.icon;
+            }
+        }
+
         public void SetWeaponsUI(GunStats.WeaponCategory selected, bool primarySlotAvailable, bool secondarySlotAvailable)
         {
             if (!primarySlotAvailable && !secondarySlotAvailable)
@@ -127,15 +192,14 @@ namespace Carnapunk.SaintCarnage.Components
                 }
             }
 
-            SetAmmoText();
+            SetAmmoText(controller.guns.SelectedGun);
         }
 
-        public void SetAmmoText()
+        public void SetAmmoText(Gun gun)
         {
-            Gun selectedGun = controller.GetSelectedGun();
-            if(selectedGun != null)
+            if (gun != null)
             {
-                textAmmo.text = selectedGun.Ammo.ToString();
+                textAmmo.text = gun.Ammo.ToString();
             }
         }
 

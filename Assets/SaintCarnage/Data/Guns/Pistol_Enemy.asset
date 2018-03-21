@@ -13,6 +13,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Class: 1
   Category: 1
+  type: 0
   Damage: 5
   FireRate: 0.5
   BulletSpeed: 250
@@ -24,3 +25,7 @@ MonoBehaviour:
   BulletPrefab: {fileID: 1980386461891036, guid: 069c6911a27c15640ac1c9284803c724,
     type: 2}
   pattern: 0
+  clipShot: {fileID: 8300000, guid: 79c2afe9d940c674f9b04d033b9b7f26, type: 3}
+  clipSelected: {fileID: 8300000, guid: 198b41749ccad9a43a42619945c036b6, type: 3}
+  clipEmpty: {fileID: 8300000, guid: 198b41749ccad9a43a42619945c036b6, type: 3}
+  icon: {fileID: 21300000, guid: d1dc100b9dea7184792094a9078ac43b, type: 3}

@@ -8,6 +8,8 @@ namespace Carnapunk.SaintCarnage.Components
     public class WeaponPickup : MonoBehaviour
     {
         public GunStats.WeaponCategory category;
+        public Gun gunPrefab;
+        public GameObject gunModelPrefab;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -15,7 +17,16 @@ namespace Carnapunk.SaintCarnage.Components
             {
                 PlayerController player = other.GetComponent<PlayerController>();
 
-                player.SetWeaponAvailable(category);
+                Gun gunInstance = Instantiate(gunPrefab).GetComponent<Gun>();
+                gunInstance.gameObject.name = gunInstance.stats.name;
+
+                GameObject model = Instantiate(gunModelPrefab);
+                model.name = gunModelPrefab.name;
+
+                player.guns.Add(gunInstance, model);
+
+                
+                // player.SetWeaponAvailable(category);
 
                 Destroy(this.gameObject);
             }

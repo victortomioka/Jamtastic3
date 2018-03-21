@@ -4,6 +4,13 @@ using UnityEngine;
 
 namespace Carnapunk.SaintCarnage.ScriptableObjects
 {
+    public enum GunType
+    {
+        Pistol,
+        Shotgun,
+        Submachine
+    }
+
     /// <summary>
     /// Representa o asset que armazenas as informações de uma arma.
     /// </summary>
@@ -14,6 +21,7 @@ namespace Carnapunk.SaintCarnage.ScriptableObjects
         public WeaponClass Class;
         public enum WeaponCategory { PrimaryWeapon, SecondaryWeapon }
         public WeaponCategory Category = WeaponCategory.PrimaryWeapon;
+        public GunType type;
 
         public float Damage;
         public float FireRate;
@@ -29,5 +37,13 @@ namespace Carnapunk.SaintCarnage.ScriptableObjects
 
         public GameObject BulletPrefab;
         public Patterns pattern;
+
+        [Header("Sound Effects")]
+        public AudioClip clipShot;
+        public AudioClip clipSelected;
+        public AudioClip clipEmpty;
+
+        [Header("UI")]
+        public Sprite icon;
     }
 }

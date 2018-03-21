@@ -6,41 +6,19 @@ using UnityEngine;
 
 namespace Carnapunk.SaintCarnage.Components
 {
-
-    [System.Serializable]
-    public struct WeaponSlot
-    {
-        public Gun gun;
-        public GameObject physicalGun;
-
-        public void SetActive(bool active)
-        {
-            gun.gameObject.SetActive(active);
-            physicalGun.SetActive(active);
-        }
-    }
-
     public class PlayerController : MonoBehaviour
     {
         public AxisMovement movement;
-        public WeaponSlot primaryWeapon;
-        public WeaponSlot secondaryWeapon;
 
         public DashMovement dashMovement;
         public LookAtCursor lookAtCursor;
+        public GunHolder guns;
 
         public float meleeDamage;
         public float knockBackForce;
 
-        [HideInInspector] public bool primaryWeaponAvailable;
-        [HideInInspector] public bool secondaryWeaponAvailable;
-        public bool HasWeaponAvailable { get { return primaryWeaponAvailable || secondaryWeaponAvailable; } }
-        public bool BothWeaponAvailable { get { return primaryWeaponAvailable && secondaryWeaponAvailable; } }
-
         private bool attacking;
         private int groundLayer;
-        private GunStats.WeaponCategory selectedWeapon;
-
 
         private Animator anim;
         private PlayerSoundEffects sfx;
@@ -51,13 +29,15 @@ namespace Carnapunk.SaintCarnage.Components
 
             anim = GetComponentInChildren<Animator>();
             sfx = GetComponentInChildren<PlayerSoundEffects>();
+        }
 
-            primaryWeapon.SetActive(false);
-            secondaryWeapon.SetActive(false);
-
-            // SetSelectedWeapon(Weapon.WeaponCategory.PrimaryWeapon);
-
-            GameManager.Instance.SetWeaponsUI(GunStats.WeaponCategory.PrimaryWeapon, primaryWeaponAvailable, secondaryWeaponAvailable);
+        private void OnEnable() 
+        {
+            guns.OnSelectedGun += OnSelectedGun;
+        }
+        private void OnDisable() 
+        {
+            guns.OnSelectedGun -= OnSelectedGun;
         }
 
         private void Reset()
@@ -65,6 +45,7 @@ namespace Carnapunk.SaintCarnage.Components
             movement = GetComponent<AxisMovement>();
             dashMovement = GetComponent<DashMovement>();
             lookAtCursor = GetComponent<LookAtCursor>();
+            guns = GetComponentInChildren<GunHolder>();
         }
 
         void FixedUpdate()
@@ -81,20 +62,16 @@ namespace Carnapunk.SaintCarnage.Components
 
         private void Update()
         {
-            if (Input.GetButton("Shoot") && HasWeaponAvailable)
+            if (Input.GetButton("Shoot"))
             {
                 SetShootAnim();
             }
+
             if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
                 dashMovement.Dash(transform.forward);
 
             if (Input.GetButtonDown("Melee") && !attacking && !dashMovement.IsDashing)
                 AttackStart();
-
-            if (Input.GetButtonDown("SwitchWeapon") && !attacking && !dashMovement.IsDashing && BothWeaponAvailable)
-            {
-                SwitchWeapon();
-            }
 
             if (Input.GetButtonDown("Cancel"))
             {
@@ -115,8 +92,6 @@ namespace Carnapunk.SaintCarnage.Components
             attacking = true;
 
             movement.enabled = false;
-            primaryWeapon.gun.enabled = false;
-            secondaryWeapon.gun.enabled = false;
         }
 
         public void AttackEnd()
@@ -124,15 +99,11 @@ namespace Carnapunk.SaintCarnage.Components
             attacking = false;
 
             movement.enabled = true;
-            primaryWeapon.gun.enabled = true;
-            secondaryWeapon.gun.enabled = true;
         }
 
         private void DashStarted()
         {
             movement.enabled = false;
-            primaryWeapon.gun.enabled = false;
-            secondaryWeapon.gun.enabled = false;
             lookAtCursor.enabled = false;
 
             anim.SetBool("dashing", true);
@@ -142,8 +113,6 @@ namespace Carnapunk.SaintCarnage.Components
         private void DashEnded()
         {
             movement.enabled = true;
-            primaryWeapon.gun.enabled = true;
-            secondaryWeapon.gun.enabled = true;
             lookAtCursor.enabled = true;
 
             anim.SetBool("dashing", false);
@@ -155,56 +124,23 @@ namespace Carnapunk.SaintCarnage.Components
             enabled = enable;
         }
 
-        private void SwitchWeapon()
+        private void OnSelectedGun(int slotIndex, Gun gun)
         {
-            if (selectedWeapon == GunStats.WeaponCategory.PrimaryWeapon)
-                SetSelectedWeapon(GunStats.WeaponCategory.SecondaryWeapon);
-            else
-                SetSelectedWeapon(GunStats.WeaponCategory.PrimaryWeapon);
-        }
+            if(gun != null)
+            {
+                anim.SetBool("pistol", gun.stats.type == GunType.Pistol);
+                anim.SetBool("shotgun", gun.stats.type == GunType.Shotgun);
 
-        private void SetSelectedWeapon(GunStats.WeaponCategory category)
-        {
-            selectedWeapon = category;
-
-            primaryWeapon.SetActive(category == GunStats.WeaponCategory.PrimaryWeapon);
-            secondaryWeapon.SetActive(category == GunStats.WeaponCategory.SecondaryWeapon);
-
-            anim.SetBool("pistol", category == GunStats.WeaponCategory.PrimaryWeapon);
-            anim.SetBool("shotgun", category == GunStats.WeaponCategory.SecondaryWeapon);
-
-            sfx.Play(category == GunStats.WeaponCategory.PrimaryWeapon ? sfx.clipSwitchPistol : sfx.clipSwitchShotgun);
-
-            GameManager.Instance.SetWeaponsUI(category, primaryWeaponAvailable, secondaryWeaponAvailable);
-        }
-
-        public Gun GetSelectedGun()
-        {
-            if(selectedWeapon == GunStats.WeaponCategory.PrimaryWeapon)
-                return primaryWeapon.gun;
-            else if(selectedWeapon == GunStats.WeaponCategory.SecondaryWeapon)
-                return secondaryWeapon.gun;
-            else
-                return null;
+                sfx.Play(gun.stats.clipSelected);
+            }
         }
 
         private void SetShootAnim()
         {
-            switch (selectedWeapon)
-            {
-                case GunStats.WeaponCategory.PrimaryWeapon:
-                    if (!primaryWeapon.gun.waitFireRate)
-                    {
-                        anim.SetTrigger("shoot");
-                    }
-                    break;
-                case GunStats.WeaponCategory.SecondaryWeapon:
-                    if (!secondaryWeapon.gun.waitFireRate)
-                    {
-                        anim.SetTrigger("shoot");
-                    }
-                    break;
-            }
+            Gun gun = guns.SelectedGun;
+
+            if(gun != null && !gun.waitFireRate)
+                anim.SetTrigger("shoot");
         }
 
         void SetIsShooting()
@@ -214,38 +150,14 @@ namespace Carnapunk.SaintCarnage.Components
 
         public void ShootWeapon()
         {
-            switch (selectedWeapon)
+            Gun gun = guns.SelectedGun;
+            if(gun != null)
             {
-                case GunStats.WeaponCategory.PrimaryWeapon:
-                    if (!primaryWeapon.gun.waitFireRate)
-
-                        primaryWeapon.gun.Shoot();
-                    sfx.Play(sfx.clipShotPistol);
-                    break;
-                case GunStats.WeaponCategory.SecondaryWeapon:
-                    if (!secondaryWeapon.gun.waitFireRate)
-
-                        secondaryWeapon.gun.Shoot();
-                    sfx.Play(sfx.clipShotShotgun);
-                    break;
+                guns.SelectedGun.Shoot();
+                sfx.Play(gun.stats.clipShot);
             }
 
-            GameManager.Instance.SetAmmoText();
-        }
-
-        public void SetWeaponAvailable(GunStats.WeaponCategory category)
-        {
-            switch (category)
-            {
-                case GunStats.WeaponCategory.PrimaryWeapon:
-                    primaryWeaponAvailable = true;
-                    SetSelectedWeapon(category);
-                    break;
-                case GunStats.WeaponCategory.SecondaryWeapon:
-                    secondaryWeaponAvailable = true;
-                    SetSelectedWeapon(category);
-                    break;
-            }
+            GameManager.Instance.SetAmmoText(gun);
         }
 
         private bool IsEnabled(MonoBehaviour component)
