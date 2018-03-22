@@ -7,7 +7,6 @@ namespace Carnapunk.SaintCarnage.Components
 {
     public class WeaponPickup : MonoBehaviour
     {
-        public GunStats.WeaponCategory category;
         public Gun gunPrefab;
         public GameObject gunModelPrefab;
 
@@ -25,8 +24,6 @@ namespace Carnapunk.SaintCarnage.Components
 
                 player.guns.Add(gunInstance, model);
 
-                
-                // player.SetWeaponAvailable(category);
 
                 Destroy(this.gameObject);
             }

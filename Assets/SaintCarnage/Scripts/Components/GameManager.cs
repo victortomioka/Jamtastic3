@@ -29,7 +29,7 @@ namespace Carnapunk.SaintCarnage.Components
         public AudioSource musicAudioSource;
         public AudioClip gameOverTheme;
 
-        private PlayerCharacter player;
+        public PlayerCharacter player;
         private PlayerController controller;
 
         public static bool IsPaused { get { return Time.timeScale == 0; } }
@@ -163,36 +163,6 @@ namespace Carnapunk.SaintCarnage.Components
                 gunIcons[index].gameObject.SetActive(true);
                 gunIcons[index].sprite = slot.gun.stats.icon;
             }
-        }
-
-        public void SetWeaponsUI(GunStats.WeaponCategory selected, bool primarySlotAvailable, bool secondarySlotAvailable)
-        {
-            if (!primarySlotAvailable && !secondarySlotAvailable)
-            {
-                iconPistol.enabled = false;
-                iconShotgun.enabled = false;
-            }
-            else
-            {
-                if (primarySlotAvailable)
-                    iconPistol.enabled = true;
-
-                if (secondarySlotAvailable)
-                    iconShotgun.enabled = true;
-
-                if (selected == GunStats.WeaponCategory.PrimaryWeapon)
-                {
-                    primarySlot.sprite = slotSelected;
-                    secondarySlot.sprite = slotNormal;
-                }
-                else
-                {
-                    primarySlot.sprite = slotNormal;
-                    secondarySlot.sprite = slotSelected;
-                }
-            }
-
-            SetAmmoText(controller.guns.SelectedGun);
         }
 
         public void SetAmmoText(Gun gun)

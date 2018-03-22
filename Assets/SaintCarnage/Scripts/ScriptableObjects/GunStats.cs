@@ -14,13 +14,10 @@ namespace Carnapunk.SaintCarnage.ScriptableObjects
     /// <summary>
     /// Representa o asset que armazenas as informações de uma arma.
     /// </summary>
-    [CreateAssetMenu(menuName = "Saint Carnage/Gun", fileName = "New Gun Stats")]
+    [CreateAssetMenu(menuName = "Saint Carnage/Stats/Gun", fileName = "New Gun Stats")]
     public class GunStats : ScriptableObject
     {
-        public enum WeaponClass { Shotgun, Pistol }
-        public WeaponClass Class;
-        public enum WeaponCategory { PrimaryWeapon, SecondaryWeapon }
-        public WeaponCategory Category = WeaponCategory.PrimaryWeapon;
+        [Header("Gun Info")]
         public GunType type;
 
         public float Damage;
