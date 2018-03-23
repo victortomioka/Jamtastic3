@@ -24,8 +24,6 @@ namespace Carnapunk.SaintCarnage.Components
 
         private void Start()
         {
-            
-
             minAngle = Mathf.FloorToInt(turretTop.rotation.eulerAngles.y - (stats.rotationAngle / 2));
             maxAngle = Mathf.FloorToInt(turretTop.rotation.eulerAngles.y + (stats.rotationAngle / 2));
 

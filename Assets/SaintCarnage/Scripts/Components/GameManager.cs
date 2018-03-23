@@ -29,7 +29,7 @@ namespace Carnapunk.SaintCarnage.Components
         public AudioSource musicAudioSource;
         public AudioClip gameOverTheme;
 
-        public PlayerCharacter player;
+        [HideInInspector] public PlayerCharacter player;
         private PlayerController controller;
 
         public static bool IsPaused { get { return Time.timeScale == 0; } }

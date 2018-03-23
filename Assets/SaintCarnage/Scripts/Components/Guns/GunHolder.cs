@@ -27,9 +27,14 @@ namespace Carnapunk.SaintCarnage.Components
         public delegate void SelectedGunAction(int slotIndex, Gun selectedGun);
         public event SelectedGunAction OnSelectedGun;
 
-        private void Start()
+        private void Awake() 
         {
             slots = transform.GetComponentsInChildren<GunSlot>();
+        }
+
+        private void Start()
+        {
+            
             SelectSlot();
         }
 
@@ -64,6 +69,9 @@ namespace Carnapunk.SaintCarnage.Components
 
         public void NextSlot()
         {
+            if(selectedSlot == -1)
+                return;
+
             int next = selectedSlot + 1;
 
             while (next != selectedSlot)
@@ -84,6 +92,9 @@ namespace Carnapunk.SaintCarnage.Components
 
         public void PreviousSlot()
         {
+            if(selectedSlot == -1)
+                return;
+
             int previous = selectedSlot - 1;
 
             while (previous != selectedSlot)

@@ -24,7 +24,6 @@ GameObject:
   - component: {fileID: 114502308818546282}
   - component: {fileID: 54816302477142946}
   - component: {fileID: 114406818884042150}
-  - component: {fileID: 114348714837085566}
   m_Layer: 0
   m_Name: Top
   m_TagString: Untagged
@@ -41,6 +40,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4703615522519236}
   - component: {fileID: 114846265907682380}
+  - component: {fileID: 136914179722199662}
   m_Layer: 0
   m_Name: Turret
   m_TagString: Untagged
@@ -109,7 +109,7 @@ Transform:
   - {fileID: 4836398669506350}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4836398669506350
 Transform:
   m_ObjectHideFlags: 1
@@ -130,7 +130,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1981036684941884}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 1.25}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4377149727199814}
@@ -1120,19 +1120,6 @@ MonoBehaviour:
   m_selectedFaces: 
   m_SelectedEdges: []
   m_selectedTriangles: 
---- !u!114 &114348714837085566
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305093748163260}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5a39cef4d01b307468e6f20d5500552d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  target: {fileID: 0}
-  turnSpeed: 10
 --- !u!114 &114406818884042150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1440,4 +1427,17 @@ MonoBehaviour:
   stats: {fileID: 11400000, guid: d9c1c49dd5e9893498e3556eacc37157, type: 2}
   turretTop: {fileID: 4377149727199814}
   gunComponent: {fileID: 114406818884042150}
-  lookComponent: {fileID: 114348714837085566}
+  lookComponent: {fileID: 0}
+--- !u!136 &136914179722199662
+CapsuleCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1355861875486886}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 1
+  m_Height: 6
+  m_Direction: 1
+  m_Center: {x: -0, y: 2, z: -0}

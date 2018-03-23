@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db9f18fe35693674c8264e1cb5db0b51, type: 3}
+  m_Name: Fixed Turret Pistol Fast
+  m_EditorClassIdentifier: 
+  type: 0
+  Damage: 10
+  FireRate: 0.7
+  BulletSpeed: 400
+  bulletCount: 1
+  spread: 0
+  maxAmmo: 0
+  unlimitedAmmo: 1
+  name: Fixed Turret Pistol
+  BulletPrefab: {fileID: 1980386461891036, guid: 069c6911a27c15640ac1c9284803c724,
+    type: 2}
+  pattern: 0
+  clipShot: {fileID: 8300000, guid: 79c2afe9d940c674f9b04d033b9b7f26, type: 3}
+  clipSelected: {fileID: 8300000, guid: 198b41749ccad9a43a42619945c036b6, type: 3}
+  clipEmpty: {fileID: 8300000, guid: 198b41749ccad9a43a42619945c036b6, type: 3}
+  icon: {fileID: 0}
+  turretType: 0
+  rotationAngle: 0
+  rotationSpeed: 0

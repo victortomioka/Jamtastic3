@@ -10,7 +10,7 @@ public class SoundEffectManager : MonoBehaviour
 
 	public AudioSource Source { get; private set; }
 
-	private void Start() 
+	private void Awake() 
 	{
 		Source = GetComponent<AudioSource>();
 	}

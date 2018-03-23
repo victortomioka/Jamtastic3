@@ -27,6 +27,6 @@ MonoBehaviour:
   clipSelected: {fileID: 8300000, guid: 198b41749ccad9a43a42619945c036b6, type: 3}
   clipEmpty: {fileID: 8300000, guid: 198b41749ccad9a43a42619945c036b6, type: 3}
   icon: {fileID: 0}
-  turretType: 2
+  turretType: 0
   rotationAngle: 0
-  rotationSpeed: 10
+  rotationSpeed: 0
