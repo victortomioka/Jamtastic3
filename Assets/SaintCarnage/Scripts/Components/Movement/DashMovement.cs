@@ -13,6 +13,7 @@ namespace Carnapunk.SaintCarnage.Components
         public TrailRenderer trail;
 
         private bool coolingDown;
+        private IEnumerator coroutine;
         #endregion
 
         #region COMPONENTES
@@ -34,17 +35,29 @@ namespace Carnapunk.SaintCarnage.Components
         public void Dash(Vector3 direction)
         {
             if (IsDashAllowed)
-                StartCoroutine("DashCoroutine", direction);
+            {
+                coroutine = DashCoroutine(direction, this.distance, this.speed);
+                StartCoroutine(coroutine);
+            }
+        }
+
+        public void Dash(Vector3 direction, float distance, float speed)
+        {
+            if (IsDashAllowed)
+            {
+                coroutine = DashCoroutine(direction, distance, speed);
+                StartCoroutine(coroutine);
+            }
         }
 
         public void Interrupt()
         {
-            StopCoroutine("DashCoroutine");
+            StopCoroutine(coroutine);
 
             DashEnd();
         }
 
-        private IEnumerator DashCoroutine(Vector3 direction)
+        private IEnumerator DashCoroutine(Vector3 direction, float distance, float speed)
         {
 
             float travelled = 0; // armazena distancia viajada
@@ -78,12 +91,11 @@ namespace Carnapunk.SaintCarnage.Components
                     yield return new WaitForFixedUpdate();
 
                     // Calcula a distância percorrida
-                    float distance = Vector3.Distance(previousPosition, rb.position);
-                    // travelled = Vector3.Distance(startPosition, rb.position);
-                    travelled += distance;
+                    float dist = Vector3.Distance(previousPosition, rb.position);
+                    travelled += dist;
 
                     // Se por algum motivo o movimento parar antes de chegar a distância estipulada, interrompe o dash
-                    if (distance == 0)
+                    if (dist == 0)
                         Interrupt();
                 }
 

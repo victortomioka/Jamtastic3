@@ -8,14 +8,13 @@ namespace Carnapunk.SaintCarnage.Components
 {
     public class PlayerController : MonoBehaviour
     {
+        public PlayerStats stats;
+
         public AxisMovement movement;
 
         public DashMovement dashMovement;
         public LookAtCursor lookAtCursor;
         public GunHolder guns;
-
-        public float meleeDamage;
-        public float knockBackForce;
 
         private bool attacking;
         private int groundLayer;
@@ -55,7 +54,7 @@ namespace Carnapunk.SaintCarnage.Components
 
             if (IsEnabled(movement))
             {
-                movement.Move(axisHorizontal, axisVertical);
+                movement.Move(axisHorizontal, axisVertical, stats.speed);
                 anim.SetBool("running", axisHorizontal != 0 || axisVertical != 0);
             }
         }
@@ -68,7 +67,7 @@ namespace Carnapunk.SaintCarnage.Components
             }
 
             if (Input.GetButtonDown("Dash") && IsEnabled(dashMovement))
-                dashMovement.Dash(transform.forward);
+                dashMovement.Dash(transform.forward, stats.dashDistance, stats.dashSpeed);
 
             if (Input.GetButtonDown("Melee") && !attacking && !dashMovement.IsDashing)
                 AttackStart();
@@ -173,12 +172,12 @@ namespace Carnapunk.SaintCarnage.Components
 
                 if (enemy != null)
                 {
-                    enemy.KnockBack(knockBackForce, -enemy.transform.forward);
+                    enemy.KnockBack(stats.knockBackForce, -enemy.transform.forward);
                     sfx.Play(sfx.clipsMeleeHit);
 
                     IDamageable dmg = enemy.gameObject.GetComponent<IDamageable>();
                     if (dmg != null)
-                        dmg.TakeHit(meleeDamage);
+                        dmg.TakeHit(stats.meleeDamage);
                 }
             }
         }

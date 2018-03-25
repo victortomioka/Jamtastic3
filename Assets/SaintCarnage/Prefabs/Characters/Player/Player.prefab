@@ -2825,7 +2825,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1684774184531580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -36.74, y: 1, z: 0}
+  m_LocalPosition: {x: 11.886, y: 0.5, z: -10.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4919611262661794}
@@ -3821,11 +3821,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e7997f1a8afb554f82b135e7922c74c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stats: {fileID: 11400000, guid: 3a337ae2a85edfa43818c0b578533c82, type: 2}
   movement: {fileID: 114295741352405238}
   dashMovement: {fileID: 114862039420965094}
   lookAtCursor: {fileID: 114006459974365628}
   guns: {fileID: 114862743184336066}
-  meleeDamage: 10
   knockBackForce: 150
 --- !u!114 &114183207874822626
 MonoBehaviour:

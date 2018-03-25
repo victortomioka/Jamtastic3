@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/SaintCarnage/Scenes/Level.unity
     guid: 9c806e3091bece740a1f6af3cb6cf56b
+  - enabled: 1
+    path: Assets/SaintCarnage/Scenes/Level01.unity
+    guid: 3e8e1f86b93b51e41a5100dd08e9b823
   m_configObjects: {}

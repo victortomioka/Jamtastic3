@@ -8,7 +8,7 @@ namespace Carnapunk.SaintCarnage.Components
     public class PlayerCharacter : Character
     {
         private Animator anim;
-        private PlayerController controller;
+        [HideInInspector] public PlayerController controller;
         private PlayerSoundEffects sfx;
 
         private bool dead;
@@ -26,6 +26,13 @@ namespace Carnapunk.SaintCarnage.Components
                 return;
 
             sfx.Play(sfx.clipsHit);
+
+            if(controller.stats.shield)
+            {
+                controller.stats.shield = false;
+                return;
+            }         
+            
             Die();
         }
 
