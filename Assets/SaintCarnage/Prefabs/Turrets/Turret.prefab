@@ -22,7 +22,6 @@ GameObject:
   - component: {fileID: 23403316633523766}
   - component: {fileID: 33713192064779278}
   - component: {fileID: 114502308818546282}
-  - component: {fileID: 54816302477142946}
   - component: {fileID: 114406818884042150}
   m_Layer: 0
   m_Name: Top
@@ -220,21 +219,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1305093748163260}
   m_Mesh: {fileID: 0}
---- !u!54 &54816302477142946
-Rigidbody:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1305093748163260}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!114 &114198194349096896
 MonoBehaviour:
   m_ObjectHideFlags: 1
